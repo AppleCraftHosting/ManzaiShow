@@ -30,4 +30,4 @@ class StonePickaxe extends Tool{
 	public function isPickaxe(){
 		return Tool::TIER_STONE;
 	}
-}
+}}

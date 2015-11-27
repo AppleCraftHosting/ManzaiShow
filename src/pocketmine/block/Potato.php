@@ -45,4 +45,4 @@ class Potato extends Crops{
 
 		return $drops;
 	}
-}
+

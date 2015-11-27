@@ -40,4 +40,5 @@ class BatchPacket extends DataPacket{
 		$this->put($this->payload);
 	}
 
-}
+
+

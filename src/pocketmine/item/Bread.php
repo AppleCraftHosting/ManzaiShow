@@ -28,4 +28,4 @@ class Bread extends Item implements Food{
 	public function isEatable() {
 		return true;
 	}	
-}
+}}

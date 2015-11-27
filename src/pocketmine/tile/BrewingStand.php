@@ -225,4 +225,4 @@ class BrewingStand extends Tile implements InventoryHolder, Container, Nameable{
 
 		return $ret;
 	}
-}
+}}

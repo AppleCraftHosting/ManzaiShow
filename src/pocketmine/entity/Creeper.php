@@ -30,4 +30,4 @@ class Creeper extends Monster implements Explosive{
 	public function explode() {
 		return null;
 	}
-}
+}}

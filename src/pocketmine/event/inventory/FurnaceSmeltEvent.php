@@ -68,4 +68,4 @@ class FurnaceSmeltEvent extends BlockEvent implements Cancellable{
 	public function setResult(Item $result){
 		$this->result = $result;
 	}
-}
+

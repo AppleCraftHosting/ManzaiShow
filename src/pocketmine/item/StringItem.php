@@ -26,5 +26,4 @@ class StringItem extends Item{
 		parent::__construct(self::STRING, $meta, $count, "String");
 	}
 
-}
-
+}}

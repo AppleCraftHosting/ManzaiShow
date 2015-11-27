@@ -28,4 +28,4 @@ abstract class NormalBiome extends Biome{
 	public function getColor(){
 		return $this->grassColor;
 	}
-}
+}}

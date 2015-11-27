@@ -146,4 +146,4 @@ abstract class Noise{
 		$this->offsetY = $y;
 		$this->offsetZ = $z;
 	}
-}
+

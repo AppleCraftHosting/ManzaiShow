@@ -49,4 +49,4 @@ class ContainerSetSlotPacket extends DataPacket{
 		$this->putSlot($this->item);
 	}
 
-}
+}}

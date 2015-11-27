@@ -49,4 +49,4 @@ class WallSign extends SignPost{
 		}
 		return false;
 	}
-}
+

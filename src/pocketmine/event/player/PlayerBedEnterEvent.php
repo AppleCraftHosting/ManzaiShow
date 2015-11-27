@@ -39,4 +39,5 @@ class PlayerBedEnterEvent extends PlayerEvent implements Cancellable{
 		return $this->bed;
 	}
 
-}
+
+

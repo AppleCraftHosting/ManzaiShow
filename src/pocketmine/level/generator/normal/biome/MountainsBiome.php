@@ -49,4 +49,4 @@ class MountainsBiome extends GrassyBiome{
 	public function getName(){
 		return "Mountains";
 	}
-}
+

@@ -30,4 +30,4 @@ class WoodenAxe extends Tool{
 	public function isAxe(){
 		return Tool::TIER_WOODEN;
 	}
-}
+}}

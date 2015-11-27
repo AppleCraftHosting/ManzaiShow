@@ -109,4 +109,4 @@ class Compound extends NamedTag implements \ArrayAccess{
 		}
 		return $str . "}";
 	}
-}
+

@@ -54,4 +54,5 @@ class EntityBlockChangeEvent extends EntityEvent implements Cancellable{
 		return $this->to;
 	}
 
-}
+
+

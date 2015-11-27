@@ -30,5 +30,4 @@ class CookedPorkchop extends Item implements Food{
                 return true;
         }
 
-}
-
+}}

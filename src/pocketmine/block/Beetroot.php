@@ -46,4 +46,4 @@ class Beetroot extends Crops{
 
 		return $drops;
 	}
-}
+

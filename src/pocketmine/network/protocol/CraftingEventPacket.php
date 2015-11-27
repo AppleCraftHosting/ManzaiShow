@@ -59,4 +59,4 @@ class CraftingEventPacket extends DataPacket{
 
 	}
 
-}
+}}

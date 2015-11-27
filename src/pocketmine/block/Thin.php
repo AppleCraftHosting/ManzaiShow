@@ -79,4 +79,5 @@ abstract class Thin extends Transparent{
 		return $block->isSolid() or $block->getId() === $this->getId() or $block->getId() === self::GLASS_PANE or $block->getId() === self::GLASS;
 	}
 
-}
+
+

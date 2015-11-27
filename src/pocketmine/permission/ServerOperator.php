@@ -38,4 +38,4 @@ interface ServerOperator{
 	 * @return void
 	 */
 	public function setOp($value);
-}
+

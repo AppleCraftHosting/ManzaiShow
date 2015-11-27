@@ -33,4 +33,4 @@ interface AttachableLogger extends \Logger{
      * @return \LoggerAttachment[]
      */
     public function getAttachments();
-}
+

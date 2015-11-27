@@ -51,4 +51,4 @@ class SeedCommand extends VanillaCommand{
 
 		return \true;
 	}
-}
+

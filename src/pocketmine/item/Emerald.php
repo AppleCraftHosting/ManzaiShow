@@ -26,5 +26,4 @@ class Emerald extends Item{
 		parent::__construct(self::EMERALD, $meta, $count, "Emerald");
 	}
 
-}
-
+}}

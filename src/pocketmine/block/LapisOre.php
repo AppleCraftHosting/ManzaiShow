@@ -54,4 +54,5 @@ class LapisOre extends Solid{
 		}
 	}
 
-}
+
+

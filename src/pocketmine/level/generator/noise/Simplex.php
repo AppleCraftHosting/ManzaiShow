@@ -437,4 +437,4 @@ class Simplex extends Perlin{
 		// Sum up and scale the result to cover the range [-1,1]
 		return 27.0 * (n0 + n1 + n2 + n3 + n4);
 	}*/
-}
+

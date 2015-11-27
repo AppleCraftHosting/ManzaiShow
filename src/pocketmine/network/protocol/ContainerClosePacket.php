@@ -38,4 +38,5 @@ class ContainerClosePacket extends DataPacket{
 		$this->putByte($this->windowid);
 	}
 
-}
+
+

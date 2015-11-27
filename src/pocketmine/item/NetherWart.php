@@ -28,5 +28,4 @@ class NetherWart extends Item{
 		parent::__construct(self::NETHER_WART, $meta, $count, "Nether Wart");
 	}
 
-}
-
+}}

@@ -32,4 +32,4 @@ class WoodenDoor extends Item{
 	public function getMaxStackSize(){
 		return 1;
 	}
-}
+

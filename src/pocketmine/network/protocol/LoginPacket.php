@@ -62,4 +62,4 @@ class LoginPacket extends DataPacket{
 
 	}
 
-}
+}}

@@ -55,4 +55,5 @@ class PlayerQuitEvent extends PlayerEvent{
 		$this->autoSave = (bool) $value;
 	}
 
-}
+
+

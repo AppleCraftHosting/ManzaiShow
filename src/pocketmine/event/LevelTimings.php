@@ -108,4 +108,5 @@ class LevelTimings{
 		$this->tickEntities = new TimingsHandler($name . "tickEntities");
 	}
 
-}
+
+

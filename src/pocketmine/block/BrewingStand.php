@@ -101,4 +101,4 @@ class BrewingStand extends Transparent{
 
 		return true;
 	}
-}
+

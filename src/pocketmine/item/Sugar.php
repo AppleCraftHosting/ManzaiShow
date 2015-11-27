@@ -26,5 +26,4 @@ class Sugar extends Item{
 		parent::__construct(self::SUGAR, $meta, $count, "Sugar");
 	}
 
-}
-
+}}

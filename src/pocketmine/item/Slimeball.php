@@ -26,5 +26,4 @@ class Slimeball extends Item{
 		parent::__construct(self::SLIMEBALL, $meta, $count, "Slimeball");
 	}
 
-}
-
+}}

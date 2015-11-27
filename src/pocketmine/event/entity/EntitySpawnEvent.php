@@ -93,4 +93,5 @@ class EntitySpawnEvent extends EntityEvent{
 		return $this->entity instanceof Item;
 	}
 
-}
+
+

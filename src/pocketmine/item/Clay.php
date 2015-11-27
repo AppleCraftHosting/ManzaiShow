@@ -26,5 +26,4 @@ class Clay extends Item{
 		parent::__construct(self::CLAY, $meta, $count, "Clay");
 	}
 
-}
-
+}}

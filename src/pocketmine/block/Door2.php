@@ -268,4 +268,4 @@ abstract class Door2 extends Transparent{
 
 		return true;
 	}
-}
+

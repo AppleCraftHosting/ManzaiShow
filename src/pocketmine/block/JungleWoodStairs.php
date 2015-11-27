@@ -45,4 +45,4 @@ class JungleWoodStairs extends Stair{
 			[$this->id, 0, 1],
 		];
 	}
-}
+

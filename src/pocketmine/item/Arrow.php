@@ -26,5 +26,4 @@ class Arrow extends Item{
 		parent::__construct(self::ARROW, $meta, $count, "Arrow");
 	}
 
-}
-
+}}

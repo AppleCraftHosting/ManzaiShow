@@ -47,4 +47,4 @@ class MobEquipmentPacket extends DataPacket{
 		$this->putByte($this->selectedSlot);
 	}
 
-}
+}}

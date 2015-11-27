@@ -31,4 +31,5 @@ class Skull extends Item{
 		return 1;
 	}
 
-}
+
+

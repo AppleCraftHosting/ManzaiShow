@@ -451,4 +451,5 @@ class PlayerInventory extends BaseInventory{
 		return parent::getHolder();
 	}
 
-}
+
+

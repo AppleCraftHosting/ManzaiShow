@@ -26,5 +26,4 @@ class Flint extends Item{
 		parent::__construct(self::FLINT, $meta, $count, "Flint");
 	}
 
-}
-
+}}

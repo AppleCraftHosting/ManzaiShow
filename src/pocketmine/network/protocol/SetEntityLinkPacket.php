@@ -42,4 +42,4 @@ class SetEntityLinkPacket extends DataPacket{
 		$this->putByte($this->type);
 	}
 
-}
+}}

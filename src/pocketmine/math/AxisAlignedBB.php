@@ -327,4 +327,4 @@ class AxisAlignedBB{
 	public function __toString(){
 		return "AxisAlignedBB({$this->minX}, {$this->minY}, {$this->minZ}, {$this->maxX}, {$this->maxY}, {$this->maxZ})";
 	}
-}
+

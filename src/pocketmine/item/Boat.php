@@ -42,4 +42,5 @@ class Boat extends Item{
 		return 1;
 	}
 
-}
+
+

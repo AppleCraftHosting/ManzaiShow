@@ -151,4 +151,4 @@ abstract class Stair extends Transparent{
 			return [];
 		}
 	}
-}
+

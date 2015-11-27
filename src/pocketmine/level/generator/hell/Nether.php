@@ -181,4 +181,5 @@ class Nether extends Generator{
 		return new Vector3(127.5, 128, 127.5);
 	}
 
-}
+
+

@@ -57,4 +57,4 @@ class Bricks extends Solid{
 			return [];
 		}
 	}
-}
+

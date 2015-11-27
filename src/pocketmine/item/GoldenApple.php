@@ -30,5 +30,4 @@ class GoldenApple extends Item implements Food{
                 return true;
         }
 
-}
-
+}}

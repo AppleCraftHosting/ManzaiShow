@@ -88,4 +88,4 @@ class Fence extends Transparent{
 		return ($block instanceof Fence or $block instanceof FenceGate) ? true : $block->isSolid() and !$block->isTransparent();
 	}
 
-}
+}}

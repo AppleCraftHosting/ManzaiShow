@@ -82,4 +82,4 @@ class FurnaceBurnEvent extends BlockEvent implements Cancellable{
 	public function setBurning($burning){
 		$this->burning = (bool) $burning;
 	}
-}
+

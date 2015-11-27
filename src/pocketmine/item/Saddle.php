@@ -31,4 +31,5 @@ class Saddle extends Item{
 		return 1;
 	}
 
-}
+
+

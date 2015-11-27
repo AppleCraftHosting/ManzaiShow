@@ -26,4 +26,4 @@ class Spider extends Monster{
  	public function getName() {
                 return "Spider";
         }
-}
+}}

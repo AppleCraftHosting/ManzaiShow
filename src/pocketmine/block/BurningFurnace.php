@@ -141,4 +141,4 @@ class BurningFurnace extends Solid{
 
 		return $drops;
 	}
-}
+

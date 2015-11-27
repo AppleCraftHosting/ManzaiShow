@@ -82,4 +82,4 @@ class TNT extends Solid{
 
 		return false;
 	}
-}
+

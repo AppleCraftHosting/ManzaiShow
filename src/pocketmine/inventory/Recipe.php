@@ -36,4 +36,4 @@ interface Recipe{
 	 * @return UUID
 	 */
 	public function getId();
-}
+

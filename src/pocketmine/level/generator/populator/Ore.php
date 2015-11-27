@@ -45,4 +45,4 @@ class Ore extends Populator{
 	public function setOreTypes(array $types){
 		$this->oreTypes = $types;
 	}
-}
+

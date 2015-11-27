@@ -34,4 +34,4 @@ abstract class GrassyBiome extends NormalBiome{
 			Block::get(Block::DIRT, 0),
 		]);
 	}
-}
+

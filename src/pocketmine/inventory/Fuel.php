@@ -55,4 +55,5 @@ abstract class Fuel{
 		Item::BUCKET => 20000,
 	];
 
-}
+
+

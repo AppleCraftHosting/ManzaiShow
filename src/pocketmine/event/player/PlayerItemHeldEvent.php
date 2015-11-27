@@ -52,4 +52,5 @@ class PlayerItemHeldEvent extends PlayerEvent implements Cancellable{
 		return $this->item;
 	}
 
-}
+
+

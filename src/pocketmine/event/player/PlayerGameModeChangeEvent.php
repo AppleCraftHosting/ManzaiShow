@@ -42,4 +42,5 @@ class PlayerGameModeChangeEvent extends PlayerEvent implements Cancellable{
 		return $this->gamemode;
 	}
 
-}
+
+

@@ -39,4 +39,4 @@ class Enderman extends Monster implements InventoryHolder{
 		return $this->inventory;
 	}
 
-}
+}}

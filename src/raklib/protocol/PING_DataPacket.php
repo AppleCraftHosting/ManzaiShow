@@ -45,4 +45,4 @@ class PING_DataPacket extends Packet{
         parent::decode();
         $this->pingID = Binary::readLong($this->get(8));
     }
-}
+}}

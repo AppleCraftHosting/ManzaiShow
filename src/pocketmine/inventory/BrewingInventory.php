@@ -74,4 +74,4 @@ class BrewingInventory extends ContainerInventory{
 
 		$this->getHolder()->scheduleUpdate();
 	}
-}
+}}

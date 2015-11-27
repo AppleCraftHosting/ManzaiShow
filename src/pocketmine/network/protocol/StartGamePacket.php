@@ -59,4 +59,4 @@ class StartGamePacket extends DataPacket{
 		$this->putByte(0);
 	}
 
-}
+}}

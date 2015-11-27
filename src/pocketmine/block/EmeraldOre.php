@@ -53,4 +53,4 @@ class EmeraldOre extends Solid{
 			return [];
 		}
 	}
-}
+

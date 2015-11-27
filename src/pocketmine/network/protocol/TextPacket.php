@@ -82,4 +82,4 @@ class TextPacket extends DataPacket{
 		}
 	}
 
-}
+}}

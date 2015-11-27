@@ -28,7 +28,7 @@ class EnchantmentList{
 	private $enchantments;
 
 	public function __construct($size){
-		$this->enchantments = new \SplFixedArray($size);
+		$this->enchantments = new SplFixedArray($size);
 	}
 
 	/**
@@ -51,4 +51,5 @@ class EnchantmentList{
 		return $this->enchantments->getSize();
 	}
 
-}
+
+

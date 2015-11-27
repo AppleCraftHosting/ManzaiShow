@@ -111,4 +111,5 @@ interface Plugin extends CommandExecutor{
 	 */
 	public function getPluginLoader();
 
-}
+
+

@@ -47,4 +47,5 @@ class InventoryOpenEvent extends InventoryEvent implements Cancellable{
 		return $this->who;
 	}
 
-}
+
+

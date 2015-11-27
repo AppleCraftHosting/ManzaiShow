@@ -30,5 +30,4 @@ class RawPorkchop extends Item implements Food{
                 return true;
         }
 
-}
-
+}}

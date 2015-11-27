@@ -53,4 +53,4 @@ class UpdateAttributesPacket extends DataPacket{
 		}
 	}
 
-}
+}}

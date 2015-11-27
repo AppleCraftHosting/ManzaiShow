@@ -26,5 +26,4 @@ class BlazeRod extends Item{
 		parent::__construct(self::BLAZE_ROD, $meta, $count, "Blaze Rod");
 	}
 
-}
-
+}}

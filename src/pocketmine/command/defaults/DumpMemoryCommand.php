@@ -42,9 +42,9 @@ class DumpMemoryCommand extends VanillaCommand{
 			return \true;
 		}
 
-		$token = \strtoupper(\substr(\sha1(BOOTUP_RANDOM . ":" . $sender->getServer()->getServerUniqueId() . ":" . self::$executions), 6, 6));
+		$token = strtoupper(substr(sha1(BOOTUP_RANDOM . ":" . $sender->getServer()->getServerUniqueId() . ":" . self::$executions), 6, 6));
 
-		if(\count($args) < 1 or \strtoupper($args[0]) !== $token){
+		if(count($args) < 1 or strtoupper($args[0]) !== $token){
 			$sender->sendMessage("Usage: /" . $this->getName() . " " . $token);
 			return \true;
 		}
@@ -54,4 +54,4 @@ class DumpMemoryCommand extends VanillaCommand{
 		$sender->getServer()->getMemoryManager()->dumpServerMemory(isset($args[1]) ? $args[1] : $sender->getServer()->getDataPath() . "/memoryDump_$token", 48, 80);
 		return \true;
 	}
-}
+}}

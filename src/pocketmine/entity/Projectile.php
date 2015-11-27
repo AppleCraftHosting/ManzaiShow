@@ -196,4 +196,5 @@ abstract class Projectile extends Entity{
 		return $hasUpdate;
 	}
 
-}
+
+

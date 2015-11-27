@@ -31,4 +31,5 @@ class Snowball extends Item{
 		return 16;
 	}
 
-}
+
+

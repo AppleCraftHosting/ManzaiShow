@@ -44,4 +44,5 @@ class EntityCombustByEntityEvent extends EntityCombustEvent{
 		return $this->combuster;
 	}
 
-}
+
+

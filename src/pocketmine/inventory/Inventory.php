@@ -216,4 +216,4 @@ interface Inventory{
 	 * @param Item   $before
 	 */
 	public function onSlotChange($index, $before);
-}
+}}

@@ -53,4 +53,4 @@ class JungleDoor extends Door{
 			[Item::JUNGLE_DOOR, 0, 1],
 		];
 	}
-}
+

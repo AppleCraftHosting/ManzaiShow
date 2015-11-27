@@ -50,4 +50,5 @@ class PlayerItemConsumeEvent extends PlayerEvent implements Cancellable{
 		return clone $this->item;
 	}
 
-}
+
+

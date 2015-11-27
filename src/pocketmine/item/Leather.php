@@ -26,5 +26,4 @@ class Leather extends Item{
 		parent::__construct(self::LEATHER, $meta, $count, "Leather");
 	}
 
-}
-
+}}

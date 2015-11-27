@@ -48,4 +48,4 @@ class TaigaBiome extends SnowyBiome{
 	public function getName(){
 		return "Taiga";
 	}
-}
+

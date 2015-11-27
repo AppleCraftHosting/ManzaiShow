@@ -62,4 +62,5 @@ class HayBale extends Solid{
 		];
 	}
 
-}
+
+

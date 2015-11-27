@@ -53,4 +53,4 @@ class MossStone extends Solid{
 			return [];
 		}
 	}
-}
+

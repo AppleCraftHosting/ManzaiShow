@@ -46,4 +46,4 @@ class Wheat extends Crops{
 
 		return $drops;
 	}
-}
+

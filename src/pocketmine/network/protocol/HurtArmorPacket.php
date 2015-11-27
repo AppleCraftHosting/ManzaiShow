@@ -38,4 +38,5 @@ class HurtArmorPacket extends DataPacket{
 		$this->putByte($this->health);
 	}
 
-}
+
+

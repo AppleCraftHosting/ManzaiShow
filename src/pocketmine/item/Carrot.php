@@ -30,4 +30,5 @@ class Carrot extends Item implements Food{
 	}
 	public function isEatable(){}
 	
-}
+
+	

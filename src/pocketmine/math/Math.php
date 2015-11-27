@@ -36,4 +36,4 @@ abstract class Math{
 		$i = (int) ($n + 1);
 		return $n >= $i ? $i : $i - 1;
 	}
-}
+

@@ -44,4 +44,5 @@ class Snow extends Solid{
 		return "Snow Block";
 	}
 
-}
+
+

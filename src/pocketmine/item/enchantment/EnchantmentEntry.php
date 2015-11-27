@@ -52,4 +52,5 @@ class EnchantmentEntry{
 		return $this->randomName;
 	}
 
-}
+
+

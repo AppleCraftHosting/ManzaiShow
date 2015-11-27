@@ -68,4 +68,5 @@ class ExplosionPrimeEvent extends EntityEvent implements Cancellable{
 		$this->blockBreaking = (bool) $affectsBlocks;
 	}
 
-}
+
+

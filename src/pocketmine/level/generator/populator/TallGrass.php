@@ -69,4 +69,4 @@ class TallGrass extends Populator{
 
 		return $y === 0 ? -1 : ++$y;
 	}
-}
+

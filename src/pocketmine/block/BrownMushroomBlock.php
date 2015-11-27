@@ -51,4 +51,4 @@ class BrownMushroomBlock extends Solid{
 		}
 		return $drops;
 	}
-}
+

@@ -66,4 +66,4 @@ class RedstoneOre extends Solid{
 			return [];
 		}
 	}
-}
+

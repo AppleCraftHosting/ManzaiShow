@@ -27,4 +27,5 @@ class Bowl extends Item{
 		parent::__construct(self::BOWL, 0, $count, "Bowl");
 	}
 
-}
+
+

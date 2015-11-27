@@ -54,4 +54,5 @@ class UpdateBlockPacket extends DataPacket{
 		}
 	}
 
-}
+
+

@@ -38,4 +38,4 @@ class Float extends NamedTag{
 	public function write(NBT $nbt){
 		$nbt->putFloat($this->value);
 	}
-}
+

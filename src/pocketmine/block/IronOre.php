@@ -53,4 +53,4 @@ class IronOre extends Solid{
 			return [];
 		}
 	}
-}
+

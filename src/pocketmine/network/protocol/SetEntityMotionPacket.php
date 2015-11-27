@@ -52,4 +52,4 @@ class SetEntityMotionPacket extends DataPacket{
 		}
 	}
 
-}
+}}

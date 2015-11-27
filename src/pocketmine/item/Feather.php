@@ -27,4 +27,5 @@ class Feather extends Item{
 		parent::__construct(self::FEATHER, 0, $count, "Feather");
 	}
 
-}
+
+

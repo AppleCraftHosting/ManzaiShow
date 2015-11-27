@@ -31,4 +31,5 @@ class LeavesDecayEvent extends BlockEvent implements Cancellable{
 		parent::__construct($block);
 	}
 
-}
+
+

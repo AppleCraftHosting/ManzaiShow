@@ -30,4 +30,4 @@ class DiamondShovel extends Tool{
 	public function isShovel(){
 		return Tool::TIER_DIAMOND;
 	}
-}
+}}

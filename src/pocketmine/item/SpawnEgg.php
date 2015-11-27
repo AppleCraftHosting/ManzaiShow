@@ -82,4 +82,4 @@ class SpawnEgg extends Item{
 
 		return false;
 	}
-}
+

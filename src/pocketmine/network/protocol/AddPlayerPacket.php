@@ -69,4 +69,4 @@ class AddPlayerPacket extends DataPacket{
 		$this->put($meta);
 	}
 
-}
+}}

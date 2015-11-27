@@ -101,4 +101,4 @@ class FloatingTextParticle extends Particle{
 		
 		return $p;
 	}
-}
+}}

@@ -45,4 +45,5 @@ class EntityCombustByBlockEvent extends EntityCombustEvent{
 		return $this->combuster;
 	}
 
-}
+
+

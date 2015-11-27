@@ -43,4 +43,4 @@ class EndStone extends Solid{
 	public function getHardness(){
 		return 3;
 	}
-}
+

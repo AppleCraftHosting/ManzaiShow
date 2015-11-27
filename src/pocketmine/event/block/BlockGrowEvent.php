@@ -42,4 +42,5 @@ class BlockGrowEvent extends BlockEvent implements Cancellable{
 		return $this->newState;
 	}
 
-}
+
+

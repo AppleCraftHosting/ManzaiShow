@@ -28,4 +28,5 @@ namespace pocketmine\utils;
  */
 interface Patchable{
 
-}
+
+

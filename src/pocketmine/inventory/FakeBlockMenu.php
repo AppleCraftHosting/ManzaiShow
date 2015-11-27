@@ -37,4 +37,4 @@ class FakeBlockMenu extends Position implements InventoryHolder{
 	public function getInventory(){
 		return $this->inventory;
 	}
-}
+

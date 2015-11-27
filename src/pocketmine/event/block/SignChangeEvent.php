@@ -77,4 +77,4 @@ class SignChangeEvent extends BlockEvent implements Cancellable{
 	public function setLine($index, $line){
 		$this->lines[$index] = $line;
 	}
-}
+

@@ -473,4 +473,4 @@ abstract class TextFormat{
 		return $newString;
 	}
 
-}
+}}

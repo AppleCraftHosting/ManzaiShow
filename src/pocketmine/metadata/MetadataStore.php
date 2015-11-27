@@ -48,7 +48,7 @@ abstract class MetadataStore{
 
 		$key = $this->disambiguate($subject, $metadataKey);
 		if(!isset($this->metadataMap[$key])){
-			$entry = new \WeakMap();
+			$entry = new WeakMap();
 			$this->metadataMap[$key] = $entry;
 		}else{
 			$entry = $this->metadataMap[$key];
@@ -137,4 +137,4 @@ abstract class MetadataStore{
 	 * @throws \InvalidArgumentException
 	 */
 	public abstract function disambiguate(Metadatable $subject, $metadataKey);
-}
+

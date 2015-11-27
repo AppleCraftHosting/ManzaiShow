@@ -41,4 +41,4 @@ class AnimatePacket extends DataPacket{
 		$this->putLong($this->eid);
 	}
 
-}
+}}

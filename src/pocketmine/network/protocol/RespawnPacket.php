@@ -44,4 +44,4 @@ class RespawnPacket extends DataPacket{
 		$this->putFloat($this->z);
 	}
 
-}
+}}

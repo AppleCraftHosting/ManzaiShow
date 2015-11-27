@@ -27,4 +27,5 @@ class Diamond extends Item{
 		parent::__construct(self::DIAMOND, 0, $count, "Diamond");
 	}
 
-}
+
+

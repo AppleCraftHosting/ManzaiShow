@@ -32,4 +32,4 @@ class HellBiome extends Biome{
 	public function getColor(){
 		return 0;
 	}
-}
+}}

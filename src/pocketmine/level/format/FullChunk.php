@@ -374,4 +374,5 @@ interface FullChunk{
 	 */
 	public static function getEmptyChunk($chunkX, $chunkZ, LevelProvider $provider = null);
 
-}
+
+

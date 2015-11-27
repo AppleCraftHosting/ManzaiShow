@@ -31,4 +31,5 @@ class FishingRod extends Item{
 		return 1;
 	}
 
-}
+
+

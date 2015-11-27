@@ -146,4 +146,4 @@ class IronTrapdoor extends Transparent{
 	public function getToolType(){
 		return Tool::TYPE_PICKAXE;
 	}
-}
+}}

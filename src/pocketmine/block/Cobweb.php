@@ -57,4 +57,4 @@ class Cobweb extends Flowable{
 		//TODO: correct drops
 		return [];
 	}
-}
+

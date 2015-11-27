@@ -38,4 +38,4 @@ class Long extends NamedTag{
 	public function write(NBT $nbt){
 		$nbt->putLong($this->value);
 	}
-}
+

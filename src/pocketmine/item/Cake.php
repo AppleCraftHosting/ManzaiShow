@@ -36,4 +36,4 @@ class Cake extends Item implements Food{
 	public function isEatable() {
 		return true;
 	}
-}
+}}

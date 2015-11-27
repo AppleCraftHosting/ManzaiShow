@@ -132,4 +132,4 @@ class WoodSlab extends Transparent{
 			[$this->id, $this->meta & 0x07, 1],
 		];
 	}
-}
+

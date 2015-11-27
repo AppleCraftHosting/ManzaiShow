@@ -74,4 +74,4 @@ class CraftItemEvent extends Event implements Cancellable{
 	public function getPlayer(){
 		return $this->player;
 	}
-}
+}}

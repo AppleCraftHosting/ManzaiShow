@@ -53,4 +53,4 @@ class AcaciaDoor extends Door{
 			[Item::ACACIA_DOOR, 0, 1],
 		];
 	}
-}
+

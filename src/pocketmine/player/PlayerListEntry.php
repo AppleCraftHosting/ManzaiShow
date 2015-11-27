@@ -36,4 +36,4 @@ class PlayerListEntry{
 	public $skinData;
 	/** @var bool */
 	public $transparency;
-}
+}}

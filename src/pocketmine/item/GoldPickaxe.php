@@ -30,4 +30,4 @@ class GoldPickaxe extends Tool{
 	public function isPickaxe(){
 		return Tool::TIER_GOLD;
 	}
-}
+}}

@@ -38,4 +38,5 @@ class SetDifficultyPacket extends DataPacket{
 		$this->putInt($this->difficulty);
 	}
 
-}
+
+

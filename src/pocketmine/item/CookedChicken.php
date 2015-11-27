@@ -30,5 +30,4 @@ class CookedChicken extends Item implements Food{
                 return true;
         }
 
-}
-
+}}

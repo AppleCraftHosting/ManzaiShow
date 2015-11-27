@@ -64,4 +64,4 @@ abstract class AttachableThreadedLogger extends \ThreadedLogger{
 
         return $attachments;
     }
-}
+

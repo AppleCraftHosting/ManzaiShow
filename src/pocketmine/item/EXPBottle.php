@@ -26,5 +26,4 @@ class EXPBottle extends Item{
 		parent::__construct(self::EXP_BOTTLE, $meta, $count, "Bottle o' Enchanting");
 	}
 
-}
-
+}}

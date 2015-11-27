@@ -50,4 +50,5 @@ class PlayerAnimationEvent extends PlayerEvent implements Cancellable{
 		return $this->animationType;
 	}
 
-}
+
+

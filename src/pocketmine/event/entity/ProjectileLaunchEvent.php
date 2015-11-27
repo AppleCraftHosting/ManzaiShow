@@ -42,4 +42,5 @@ class ProjectileLaunchEvent extends EntityEvent implements Cancellable{
 		return $this->entity;
 	}
 
-}
+
+

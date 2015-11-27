@@ -29,5 +29,4 @@ class Redstone extends Item{
 		parent::__construct(self::REDSTONE, $meta, $count, "Redstone");
 	}
 
-}
-
+}}

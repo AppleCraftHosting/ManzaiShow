@@ -218,4 +218,4 @@ class Enum extends NamedTag implements \ArrayAccess, \Countable{
 		}
 		return $str . "}";
 	}
-}
+}}

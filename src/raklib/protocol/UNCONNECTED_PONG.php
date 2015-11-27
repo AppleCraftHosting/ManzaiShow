@@ -50,4 +50,4 @@ class UNCONNECTED_PONG extends Packet{
         $this->offset += 16; //magic
         $this->serverName = $this->getString();
     }
-}
+}}

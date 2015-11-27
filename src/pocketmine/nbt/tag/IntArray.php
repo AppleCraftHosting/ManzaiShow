@@ -47,4 +47,4 @@ class IntArray extends NamedTag{
 		$str .= implode(", ", $this->value);
 		return $str . "}";
 	}
-}
+

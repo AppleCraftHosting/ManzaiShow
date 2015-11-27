@@ -44,4 +44,4 @@ class FlowerPot extends Spawnable{
 		
 		return $c;
 	}
-}
+}}

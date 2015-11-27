@@ -114,4 +114,5 @@ class Random{
 		return $this->nextInt() % $bound;
 	}
 
-}
+
+

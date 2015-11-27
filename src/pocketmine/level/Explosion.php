@@ -237,4 +237,4 @@ class Explosion{
 
 		return true;
 	}
-}
+}}

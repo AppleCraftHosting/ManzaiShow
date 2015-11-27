@@ -32,4 +32,4 @@ class BrewingStand extends Item{
 	public function getMaxStackSize(){
 		return 64;
 	}
-}
+

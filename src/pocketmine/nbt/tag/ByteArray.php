@@ -39,4 +39,4 @@ class ByteArray extends NamedTag{
 		$nbt->putInt(strlen($this->value));
 		$nbt->put($this->value);
 	}
-}
+

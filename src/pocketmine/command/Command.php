@@ -128,7 +128,7 @@ abstract class Command{
 		if($this->permissionMessage === \null){
 			$target->sendMessage(new TranslationContainer(TextFormat::RED . "%commands.generic.permission"));
 		}elseif($this->permissionMessage !== ""){
-			$target->sendMessage(\str_replace("<permission>", $this->permission, $this->permissionMessage));
+			$target->sendMessage(str_replace("<permission>", $this->permission, $this->permissionMessage));
 		}
 
 		return \false;
@@ -144,7 +144,7 @@ abstract class Command{
 			return \true;
 		}
 
-		foreach(\explode(";", $this->permission) as $permission){
+		foreach(explode(";", $this->permission) as $permission){
 			if($target->hasPermission($permission)){
 				return \true;
 			}
@@ -325,4 +325,4 @@ abstract class Command{
 	public function __toString(){
 		return $this->name;
 	}
-}
+}}

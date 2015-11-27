@@ -41,4 +41,5 @@ class ProjectileHitEvent extends EntityEvent{
 		return $this->entity;
 	}
 
-}
+
+

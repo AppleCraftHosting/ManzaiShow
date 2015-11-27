@@ -26,5 +26,4 @@ class Egg extends Item{
 		parent::__construct(self::EGG, $meta, $count, "Egg");
 	}
 
-}
-
+}}

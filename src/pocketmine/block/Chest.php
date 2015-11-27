@@ -178,4 +178,4 @@ class Chest extends Transparent{
 			[$this->id, 0, 1],
 		];
 	}
-}
+

@@ -26,5 +26,4 @@ class Clock extends Item{
 		parent::__construct(self::CLOCK, $meta, $count, "Clock");
 	}
 
-}
-
+}}

@@ -39,4 +39,5 @@ class PlayerToggleSneakEvent extends PlayerEvent implements Cancellable{
 		return $this->isSneaking;
 	}
 
-}
+
+

@@ -17,4 +17,5 @@
 
 class UndefinedVariableException extends InvalidStateException{
 
-}
+
+

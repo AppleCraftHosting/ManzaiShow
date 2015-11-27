@@ -172,4 +172,4 @@ class Leaves extends Transparent{
 
 		return $drops;
 	}
-}
+

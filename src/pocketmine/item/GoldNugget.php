@@ -26,5 +26,4 @@ class GoldNugget extends Item{
 		parent::__construct(self::GOLD_NUGGET, $meta, $count, "Gold Nugget");
 	}
 
-}
-
+}}

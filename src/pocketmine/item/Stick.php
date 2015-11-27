@@ -27,4 +27,5 @@ class Stick extends Item{
 		parent::__construct(self::STICK, 0, $count, "Stick");
 	}
 
-}
+
+

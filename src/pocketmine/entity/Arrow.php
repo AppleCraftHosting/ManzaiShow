@@ -90,4 +90,4 @@ class Arrow extends Projectile{
 
 		parent::spawnTo($player);
 	}
-}
+

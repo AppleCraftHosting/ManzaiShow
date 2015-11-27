@@ -58,4 +58,5 @@ interface TransactionGroup{
 	 */
 	function hasExecuted();
 
-}
+
+

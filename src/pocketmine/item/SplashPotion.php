@@ -31,4 +31,5 @@ class SplashPotion extends Item{
 		return 1;
 	}
 
-}
+
+

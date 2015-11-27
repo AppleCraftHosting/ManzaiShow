@@ -29,4 +29,5 @@ class StillLava extends Lava{
 		return "Still Lava";
 	}
 
-}
+
+

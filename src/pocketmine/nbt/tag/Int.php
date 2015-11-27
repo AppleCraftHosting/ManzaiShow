@@ -38,4 +38,4 @@ class Int extends NamedTag{
 	public function write(NBT $nbt){
 		$nbt->putInt($this->value);
 	}
-}
+

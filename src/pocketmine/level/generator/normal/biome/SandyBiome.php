@@ -34,4 +34,4 @@ abstract class SandyBiome extends NormalBiome{
 			Block::get(Block::SANDSTONE, 0),
 		]);
 	}
-}
+

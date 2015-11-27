@@ -44,4 +44,5 @@ class SandstoneStairs extends Stair{
 		return "Sandstone Stairs";
 	}
 
-}
+
+

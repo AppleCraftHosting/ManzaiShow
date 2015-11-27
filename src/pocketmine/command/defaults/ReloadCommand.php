@@ -49,4 +49,4 @@ class ReloadCommand extends VanillaCommand{
 
 		return \true;
 	}
-}
+}}

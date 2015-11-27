@@ -17,4 +17,5 @@
 
 class ClassNotFoundException extends LogicException{
 
-}
+
+

@@ -27,4 +27,5 @@ class Bow extends Tool{
 		parent::__construct(self::BOW, $meta, $count, "Bow");
 	}
 
-}
+
+

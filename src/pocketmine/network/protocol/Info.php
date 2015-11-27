@@ -87,15 +87,4 @@ interface Info{
 	const PLAYER_LIST_PACKET = 0xc3;
 	//const TELEMETRY_EVENT_PACKET = 0xc4;
 
-}
-
-
-
-
-
-
-
-
-
-
-
+}}

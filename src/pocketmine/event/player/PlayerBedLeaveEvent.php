@@ -38,4 +38,5 @@ class PlayerBedLeaveEvent extends PlayerEvent{
 		return $this->bed;
 	}
 
-}
+
+

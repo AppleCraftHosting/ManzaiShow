@@ -70,4 +70,4 @@ class AddEntityPacket extends DataPacket{
 		}
 	}
 
-}
+}}

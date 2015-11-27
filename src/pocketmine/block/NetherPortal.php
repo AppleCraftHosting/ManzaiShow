@@ -55,4 +55,4 @@ class NetherPortal extends Flowable {
 		$this->getLevel()->setBlock($this, new Air(), \true, \true);
 		return \true;
 	}
-}
+

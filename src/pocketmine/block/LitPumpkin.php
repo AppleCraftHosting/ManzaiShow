@@ -57,4 +57,4 @@ class LitPumpkin extends Solid{
 
 		return true;
 	}
-}
+

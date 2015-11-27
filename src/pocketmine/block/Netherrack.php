@@ -53,4 +53,4 @@ class Netherrack extends Solid{
 			return [];
 		}
 	}
-}
+

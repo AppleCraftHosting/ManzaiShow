@@ -27,4 +27,5 @@ class Brick extends Item{
 		parent::__construct(self::BRICK, 0, $count, "Brick");
 	}
 
-}
+
+

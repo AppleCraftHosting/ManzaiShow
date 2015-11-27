@@ -53,4 +53,4 @@ class OakDoor extends Door{
 			[Item::OAK_DOOR, 0, 1],
 		];
 	}
-}
+

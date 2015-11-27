@@ -94,4 +94,5 @@ class Painting extends Item{
 		return false;
 	}
 
-}
+
+

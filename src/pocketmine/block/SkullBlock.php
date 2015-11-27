@@ -95,4 +95,4 @@ class SkullBlock extends Transparent{
 			return [];
 		}
 	}
-}
+

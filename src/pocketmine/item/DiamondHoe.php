@@ -30,4 +30,4 @@ class DiamondHoe extends Tool{
 	public function isHoe(){
 		return Tool::TIER_DIAMOND;
 	}
-}
+

@@ -26,5 +26,4 @@ class GlowstoneDust extends Item{
 		parent::__construct(self::GLOWSTONE_DUST, $meta, $count, "Glowstone Dust");
 	}
 
-}
-
+}}

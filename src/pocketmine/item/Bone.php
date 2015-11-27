@@ -26,5 +26,4 @@ class Bone extends Item{
 		parent::__construct(self::BONE, $meta, $count, "Bone");
 	}
 
-}
-
+}}

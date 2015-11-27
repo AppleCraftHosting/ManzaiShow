@@ -58,4 +58,4 @@ class MagmaCube extends Monster{
 	public function getDrops(){
 		return [];
 	}
-}
+}}

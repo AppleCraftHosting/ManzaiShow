@@ -127,4 +127,4 @@ abstract class DefaultPermissions{
 
 		$parent->recalculatePermissibles();
 	}
-}
+

@@ -53,4 +53,4 @@ class IronDoor extends Door2{
 			return [];
 		}
 	}
-}
+

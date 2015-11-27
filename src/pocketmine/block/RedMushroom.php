@@ -60,4 +60,4 @@ class RedMushroom extends Flowable{
 
 		return false;
 	}
-}
+

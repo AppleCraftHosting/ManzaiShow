@@ -48,4 +48,4 @@ class StopCommand extends VanillaCommand{
 
 		return \true;
 	}
-}
+

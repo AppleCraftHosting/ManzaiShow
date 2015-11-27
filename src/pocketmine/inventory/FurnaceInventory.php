@@ -90,4 +90,4 @@ class FurnaceInventory extends ContainerInventory{
 
 		$this->getHolder()->scheduleUpdate();
 	}
-}
+}}

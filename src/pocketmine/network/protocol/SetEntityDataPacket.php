@@ -45,4 +45,4 @@ class SetEntityDataPacket extends DataPacket{
 		$this->put($meta);
 	}
 
-}
+}}

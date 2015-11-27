@@ -38,4 +38,4 @@ class Double extends NamedTag{
 	public function write(NBT $nbt){
 		$nbt->putDouble($this->value);
 	}
-}
+

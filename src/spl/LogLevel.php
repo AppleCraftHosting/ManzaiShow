@@ -24,4 +24,4 @@ interface LogLevel{
     const NOTICE = "notice";
     const INFO = "info";
     const DEBUG = "debug";
-}
+

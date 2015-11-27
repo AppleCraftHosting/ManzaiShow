@@ -68,4 +68,4 @@ class PlayerActionPacket extends DataPacket{
 		$this->putInt($this->face);
 	}
 
-}
+}}

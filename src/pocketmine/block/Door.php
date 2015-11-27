@@ -293,4 +293,4 @@ abstract class Door extends Transparent{
 
 		return true;
 	}
-}
+

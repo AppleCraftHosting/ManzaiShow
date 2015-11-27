@@ -52,4 +52,4 @@ class PlayerMoveEvent extends PlayerEvent implements Cancellable{
 	public function setTo(Location $to){
 		$this->to = $to;
 	}
-}
+

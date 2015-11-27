@@ -32,4 +32,4 @@ class Sign extends Item{
 	public function getMaxStackSize(){
 		return 16;
 	}
-}
+

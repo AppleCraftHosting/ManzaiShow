@@ -44,4 +44,4 @@ abstract class LevelEvent extends Event{
 	public function getLevel(){
 		return $this->level;
 	}
-}
+

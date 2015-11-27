@@ -44,4 +44,4 @@ class DestroyBlockParticle extends Particle{
 		
 		return $pk;
 	}
-}
+}}

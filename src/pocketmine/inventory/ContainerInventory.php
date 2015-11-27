@@ -54,4 +54,4 @@ abstract class ContainerInventory extends BaseInventory{
 		$who->dataPacket($pk);
 		parent::onClose($who);
 	}
-}
+

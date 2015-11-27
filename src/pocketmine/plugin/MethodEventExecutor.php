@@ -39,4 +39,4 @@ class MethodEventExecutor implements EventExecutor{
 	public function getMethod(){
 		return $this->method;
 	}
-}
+

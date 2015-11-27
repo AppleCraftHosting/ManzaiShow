@@ -168,4 +168,4 @@ class CraftingDataPacket extends DataPacket{
 		$this->putByte($this->cleanRecipes ? 1 : 0);
 	}
 
-}
+}}

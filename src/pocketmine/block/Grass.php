@@ -99,4 +99,4 @@ class Grass extends Solid{
 
 		return false;
 	}
-}
+

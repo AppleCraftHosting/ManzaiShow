@@ -43,4 +43,4 @@ class GlassPane extends Thin{
 	public function getDrops(Item $item){
 		return [];
 	}
-}
+

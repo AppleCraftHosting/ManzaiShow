@@ -53,4 +53,4 @@ class SpruceDoor extends Door{
 			[Item::SPRUCE_DOOR, 0, 1],
 		];
 	}
-}
+

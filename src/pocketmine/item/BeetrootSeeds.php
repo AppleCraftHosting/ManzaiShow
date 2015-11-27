@@ -28,4 +28,4 @@ class BeetrootSeeds extends Item{
 		$this->block = Block::get(Item::BEETROOT_BLOCK);
 		parent::__construct(self::BEETROOT_SEEDS, 0, $count, "Beetroot Seeds");
 	}
-}
+

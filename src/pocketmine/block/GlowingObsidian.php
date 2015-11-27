@@ -38,4 +38,5 @@ class GlowingObsidian extends Solid{
 		return 12;
 	}
 
-}
+
+

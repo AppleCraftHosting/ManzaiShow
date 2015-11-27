@@ -160,4 +160,4 @@ class Trapdoor extends Transparent{
 	public function getToolType(){
 		return Tool::TYPE_AXE;
 	}
-}
+}}

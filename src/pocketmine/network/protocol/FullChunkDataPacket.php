@@ -48,4 +48,4 @@ class FullChunkDataPacket extends DataPacket{
 		$this->put($this->data);
 	}
 
-}
+}}

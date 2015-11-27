@@ -76,4 +76,4 @@ class Egg extends Projectile{
 
 		parent::spawnTo($player);
 	}
-}
+}}

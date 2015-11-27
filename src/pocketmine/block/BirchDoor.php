@@ -53,4 +53,4 @@ class BirchDoor extends Door{
 			[Item::BIRCH_DOOR, 0, 1],
 		];
 	}
-}
+

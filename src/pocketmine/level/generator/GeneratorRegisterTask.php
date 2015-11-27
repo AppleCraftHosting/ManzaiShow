@@ -55,4 +55,4 @@ class GeneratorRegisterTask extends AsyncTask{
 		$generator->init($manager, new Random($manager->getSeed()));
 		$this->saveToThreadStore("generation.level{$this->levelId}.generator", $generator);
 	}
-}
+}}

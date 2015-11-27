@@ -47,4 +47,4 @@ class BlockEntityDataPacket extends DataPacket{
 		$this->put($this->namedtag);
 	}
 
-}
+}}

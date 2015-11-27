@@ -53,4 +53,4 @@ class QuartzOre extends Solid{
 			return [];
 		}
 	}
-}
+

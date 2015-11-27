@@ -63,4 +63,4 @@ class Blaze extends Monster{
 		$drops = [];
 		return $drops;
 	}
-}
+

@@ -57,4 +57,4 @@ class CLIENT_HANDSHAKE_DataPacket extends Packet{
         $this->sendPing = Binary::readLong($this->get(8));
         $this->sendPong = Binary::readLong($this->get(8));
     }
-}
+}}

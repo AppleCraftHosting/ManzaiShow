@@ -47,4 +47,5 @@ class InventoryPickupArrowEvent extends InventoryEvent implements Cancellable{
 		return $this->arrow;
 	}
 
-}
+
+

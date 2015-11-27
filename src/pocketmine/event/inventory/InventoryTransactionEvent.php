@@ -49,4 +49,4 @@ class InventoryTransactionEvent extends Event implements Cancellable{
 		return $this->ts;
 	}
 
-}
+}}

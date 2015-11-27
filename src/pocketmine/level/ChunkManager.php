@@ -87,4 +87,4 @@ interface ChunkManager{
 	 * @return int
 	 */
 	public function getSeed();
-}
+

@@ -29,4 +29,4 @@ class FenceGateAcacia extends FenceGate{
 	public function getName(){
 		return "Acacia Fence Gate";
 	}
-}
+

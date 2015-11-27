@@ -30,4 +30,4 @@ class IronShovel extends Tool{
 	public function isShovel(){
 		return Tool::TIER_IRON;
 	}
-}
+

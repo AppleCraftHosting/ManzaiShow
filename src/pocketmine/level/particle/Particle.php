@@ -64,4 +64,4 @@ abstract class Particle extends Vector3{
 	 */
 	abstract public function encode();
 
-}
+}}

@@ -70,4 +70,4 @@ class ChestInventory extends ContainerInventory{
 		}
 		parent::onClose($who);
 	}
-}
+}}

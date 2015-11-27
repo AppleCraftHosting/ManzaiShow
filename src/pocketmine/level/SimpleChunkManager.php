@@ -129,4 +129,4 @@ class SimpleChunkManager implements ChunkManager{
 	public function getSeed(){
 		return $this->seed;
 	}
-}
+

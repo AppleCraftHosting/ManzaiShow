@@ -34,4 +34,4 @@ class CookedFish extends Item implements Food{
                 return true;
         }
 
-}
+}}

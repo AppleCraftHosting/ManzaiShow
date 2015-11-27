@@ -44,4 +44,4 @@ class EnchantInventory extends ContainerInventory{
 			$this->clear($i);
 		}
 	}
-}
+

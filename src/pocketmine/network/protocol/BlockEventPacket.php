@@ -46,4 +46,5 @@ class BlockEventPacket extends DataPacket{
 		$this->putInt($this->case2);
 	}
 
-}
+
+

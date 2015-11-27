@@ -59,4 +59,4 @@ class EnchantTable extends Spawnable implements Nameable{
 
 		return $c;
 	}
-}
+}}

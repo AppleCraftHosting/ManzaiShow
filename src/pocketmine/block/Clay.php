@@ -49,4 +49,4 @@ class Clay extends Solid{
 			[Item::CLAY, 0, 4],
 		];
 	}
-}
+

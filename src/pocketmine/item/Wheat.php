@@ -26,5 +26,4 @@ class Wheat extends Item{
 		parent::__construct(self::WHEAT, $meta, $count, "Wheat");
 	}
 
-}
-
+}}

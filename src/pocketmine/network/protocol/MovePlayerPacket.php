@@ -71,4 +71,4 @@ class MovePlayerPacket extends DataPacket{
 		$this->putByte($this->onGround > 0);
 	}
 
-}
+}}

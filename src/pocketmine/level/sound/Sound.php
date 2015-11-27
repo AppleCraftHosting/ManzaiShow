@@ -31,4 +31,4 @@ abstract class Sound extends Vector3{
 	 */
 	abstract public function encode();
 
-}
+}}

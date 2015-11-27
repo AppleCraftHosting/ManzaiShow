@@ -249,4 +249,4 @@ class BinaryStream extends \stdClass{
 	public function feof(){
 		return !isset($this->buffer{$this->offset});
 	}
-}
+}}

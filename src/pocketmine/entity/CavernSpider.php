@@ -64,4 +64,4 @@ class CavernSpider extends Monster{
 		}
 		return $drops;
 	}
-}
+}}

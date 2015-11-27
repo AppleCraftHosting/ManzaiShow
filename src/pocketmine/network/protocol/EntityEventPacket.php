@@ -59,4 +59,4 @@ class EntityEventPacket extends DataPacket{
 		$this->putByte($this->event);
 	}
 
-}
+}}

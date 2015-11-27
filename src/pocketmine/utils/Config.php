@@ -495,4 +495,4 @@ class Config{
 		}
 	}
 
-}
+}}

@@ -38,4 +38,5 @@ class SetHealthPacket extends DataPacket{
 		$this->putInt($this->health);
 	}
 
-}
+
+

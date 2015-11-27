@@ -27,4 +27,5 @@ class Steak extends Item implements Food{
 	}
 	public function isEatable(){}
 	
-}
+
+	

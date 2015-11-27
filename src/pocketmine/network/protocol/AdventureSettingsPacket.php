@@ -38,4 +38,5 @@ class AdventureSettingsPacket extends DataPacket{
 		$this->putInt($this->flags);
 	}
 
-}
+
+

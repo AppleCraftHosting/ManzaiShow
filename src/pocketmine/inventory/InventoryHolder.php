@@ -29,4 +29,4 @@ interface InventoryHolder{
 	 * @return Inventory
 	 */
 	public function getInventory();
-}
+

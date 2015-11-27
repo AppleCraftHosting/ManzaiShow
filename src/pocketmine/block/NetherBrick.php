@@ -53,4 +53,4 @@ class NetherBrick extends Solid{
 			return [];
 		}
 	}
-}
+

@@ -201,4 +201,4 @@ abstract class Biome{
 	 * @return int (Red|Green|Blue)
 	 */
 	abstract public function getColor();
-}
+

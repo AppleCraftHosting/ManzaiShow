@@ -40,4 +40,4 @@ class RemovePlayerPacket extends DataPacket{
 		$this->putUUID($this->clientId);
 	}
 
-}
+}}

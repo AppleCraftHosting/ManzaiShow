@@ -71,4 +71,5 @@ class ServerCommandEvent extends ServerEvent implements Cancellable{
 		$this->command = $command;
 	}
 
-}
+
+

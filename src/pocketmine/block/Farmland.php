@@ -61,4 +61,4 @@ class Farmland extends Solid{
 			[Item::DIRT, 0, 1],
 		];
 	}
-}
+

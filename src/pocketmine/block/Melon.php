@@ -49,4 +49,4 @@ class Melon extends Transparent{
 			[Item::MELON_SLICE, 0, mt_rand(3, 7)],
 		];
 	}
-}
+

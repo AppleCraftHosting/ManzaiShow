@@ -30,4 +30,4 @@ interface PermissionRemovedExecutor{
 	 * @return void
 	 */
 	public function attachmentRemoved(PermissionAttachment $attachment);
-}
+

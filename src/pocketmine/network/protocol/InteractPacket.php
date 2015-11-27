@@ -42,4 +42,4 @@ class InteractPacket extends DataPacket{
 		$this->putLong($this->target);
 	}
 
-}
+}}

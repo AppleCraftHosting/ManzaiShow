@@ -317,4 +317,4 @@ class RegionLoader{
 		return $this->z;
 	}
 
-}
+}}

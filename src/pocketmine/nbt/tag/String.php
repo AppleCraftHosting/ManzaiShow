@@ -39,4 +39,4 @@ class String extends NamedTag{
 		$nbt->putShort(strlen($this->value));
 		$nbt->put($this->value);
 	}
-}
+

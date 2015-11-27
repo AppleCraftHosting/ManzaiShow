@@ -65,4 +65,4 @@ class GrassPath extends Transparent{
 			[Item::DIRT, 0, 1],
 		];
 	}
-}
+

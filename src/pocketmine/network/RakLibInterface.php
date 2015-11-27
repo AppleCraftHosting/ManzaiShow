@@ -258,4 +258,4 @@ class RakLibInterface implements ServerInstance, AdvancedSourceInterface{
 
 		return $data;
 	}
-}
+}}

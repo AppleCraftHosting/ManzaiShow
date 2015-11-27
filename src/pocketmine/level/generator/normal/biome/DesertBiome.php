@@ -36,4 +36,4 @@ class DesertBiome extends SandyBiome{
 	public function getName(){
 		return "Desert";
 	}
-}
+

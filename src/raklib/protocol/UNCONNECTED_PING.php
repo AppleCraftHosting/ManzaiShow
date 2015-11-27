@@ -44,4 +44,4 @@ class UNCONNECTED_PING extends Packet{
         $this->pingID = Binary::readLong($this->get(8));
         //magic
     }
-}
+}}

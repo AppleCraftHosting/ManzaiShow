@@ -53,4 +53,4 @@ class Redstone extends Solid{
 			return [];
 		}
 	}
-}
+

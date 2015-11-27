@@ -23,4 +23,5 @@ interface LoggerAttachment{
      */
     public function log($level, $message);
 
-}
+
+

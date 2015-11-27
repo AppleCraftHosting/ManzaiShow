@@ -44,4 +44,5 @@ class QuartzStairs extends Stair{
 		return "Quartz Stairs";
 	}
 
-}
+
+

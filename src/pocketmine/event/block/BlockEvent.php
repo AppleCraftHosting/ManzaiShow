@@ -44,4 +44,4 @@ abstract class BlockEvent extends Event{
 	public function getBlock(){
 		return $this->block;
 	}
-}
+

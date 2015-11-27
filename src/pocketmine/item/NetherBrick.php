@@ -26,5 +26,4 @@ class NetherBrick extends Item{
 		parent::__construct(self::NETHER_BRICK, $meta, $count, "Nether Brick");
 	}
 
-}
-
+}}

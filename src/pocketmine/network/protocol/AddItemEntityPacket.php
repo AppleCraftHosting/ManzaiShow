@@ -52,4 +52,4 @@ class AddItemEntityPacket extends DataPacket{
 		$this->putFloat($this->speedZ);
 	}
 
-}
+}}

@@ -44,4 +44,4 @@ class AnvilInventory extends ContainerInventory{
 			$this->clear($i);
 		}
 	}
-}
+

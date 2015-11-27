@@ -45,4 +45,4 @@ abstract class PluginTask extends Task{
 		return $this->owner;
 	}
 
-}
+}}

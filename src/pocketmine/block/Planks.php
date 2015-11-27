@@ -60,4 +60,5 @@ class Planks extends Solid{
 		return $names[$this->meta & 0x07];
 	}
 
-}
+
+

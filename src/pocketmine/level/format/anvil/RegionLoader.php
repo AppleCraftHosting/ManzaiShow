@@ -48,4 +48,4 @@ class RegionLoader extends \pocketmine\level\format\mcregion\RegionLoader{
 	protected function unserializeChunk($data){
 		return Chunk::fromBinary($data, $this->levelProvider);
 	}
-}
+

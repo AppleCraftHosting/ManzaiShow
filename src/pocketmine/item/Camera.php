@@ -26,5 +26,4 @@ class Camera extends Item{
 		parent::__construct(self::CAMERA, $meta, $count, "Camera");
 	}
 
-}
-
+}}

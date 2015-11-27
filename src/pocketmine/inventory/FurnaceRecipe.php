@@ -50,7 +50,7 @@ class FurnaceRecipe implements Recipe{
 
 	public function setId(UUID $id){
 		if($this->id !== null){
-			throw new \InvalidStateException("Id is already set");
+			throw new InvalidStateException("Id is already set");
 		}
 
 		$this->id = $id;
@@ -80,4 +80,4 @@ class FurnaceRecipe implements Recipe{
 	public function registerToCraftingManager(){
 		Server::getInstance()->getCraftingManager()->registerFurnaceRecipe($this);
 	}
-}
+

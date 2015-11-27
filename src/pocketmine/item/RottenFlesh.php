@@ -28,4 +28,4 @@ class RottenFlesh extends Item implements Food{
 	}
 	public function isEatable(){}
 	
-}
+}}

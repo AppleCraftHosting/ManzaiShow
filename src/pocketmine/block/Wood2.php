@@ -37,4 +37,4 @@ class Wood2 extends Wood{
 		];
 		return $names[$this->meta & 0x03];
 	}
-}
+}}

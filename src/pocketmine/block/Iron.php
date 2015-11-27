@@ -53,4 +53,4 @@ class Iron extends Solid{
 			return [];
 		}
 	}
-}
+

@@ -29,4 +29,4 @@ interface Cancellable{
 	public function isCancelled();
 
 	public function setCancelled($value = \true);
-}
+}}

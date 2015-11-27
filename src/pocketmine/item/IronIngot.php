@@ -27,4 +27,5 @@ class IronIngot extends Item{
 		parent::__construct(self::IRON_INGOT, 0, $count, "Iron Ingot");
 	}
 
-}
+
+

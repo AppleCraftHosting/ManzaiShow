@@ -26,5 +26,4 @@ class Quartz extends Item{
 		parent::__construct(self::QUARTZ, $meta, $count, "Quartz");
 	}
 
-}
-
+}}

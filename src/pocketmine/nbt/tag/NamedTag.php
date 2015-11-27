@@ -44,4 +44,4 @@ abstract class NamedTag extends Tag{
 	public function setName($name){
 		$this->__name = $name;
 	}
-}
+

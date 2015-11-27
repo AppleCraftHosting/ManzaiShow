@@ -63,4 +63,4 @@ class Workbench extends Solid{
 			[$this->id, 0, 1],
 		];
 	}
-}
+

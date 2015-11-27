@@ -38,4 +38,4 @@ class DisconnectPacket extends DataPacket{
 		$this->putString($this->message);
 	}
 
-}
+}}

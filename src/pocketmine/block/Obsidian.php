@@ -53,4 +53,4 @@ class Obsidian extends Solid{
 			return [];
 		}
 	}
-}
+

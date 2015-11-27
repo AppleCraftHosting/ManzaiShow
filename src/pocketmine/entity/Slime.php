@@ -26,4 +26,4 @@ class Slime extends Living{
  	public function getName() {
                 return "Slime";
         }
-}
+}}

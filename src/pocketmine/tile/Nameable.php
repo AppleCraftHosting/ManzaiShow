@@ -39,4 +39,4 @@ interface Nameable{
 	 * @return bool
 	 */
 	public function hasName();
-}
+}}

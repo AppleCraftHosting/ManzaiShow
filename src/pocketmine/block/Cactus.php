@@ -128,4 +128,4 @@ class Cactus extends Transparent{
 			[$this->id, 0, 1],
 		];
 	}
-}
+

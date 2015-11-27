@@ -29,4 +29,4 @@ class FenceGateDarkOak extends FenceGate{
 	public function getName(){
 		return "Dark Oak Fence Gate";
 	}
-}
+

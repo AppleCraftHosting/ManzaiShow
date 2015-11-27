@@ -62,4 +62,5 @@ class StainedClay extends Solid{
 		return $names[$this->meta & 0x0f];
 	}
 
-}
+
+

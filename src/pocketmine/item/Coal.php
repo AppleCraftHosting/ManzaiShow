@@ -30,4 +30,5 @@ class Coal extends Item{
 		}
 	}
 
-}
+
+

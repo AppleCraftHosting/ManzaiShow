@@ -54,5 +54,4 @@ class IronBars extends Thin{
 		}
 	}
 
-}
-
+}}

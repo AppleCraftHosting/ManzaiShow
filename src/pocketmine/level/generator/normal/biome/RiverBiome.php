@@ -42,4 +42,4 @@ class RiverBiome extends GrassyBiome{
 	public function getName(){
 		return "River";
 	}
-}
+

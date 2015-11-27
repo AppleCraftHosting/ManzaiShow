@@ -61,4 +61,5 @@ class EntityDeathEvent extends EntityEvent{
 		$this->drops = $drops;
 	}
 
-}
+
+

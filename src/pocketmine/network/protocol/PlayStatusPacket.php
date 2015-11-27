@@ -43,4 +43,4 @@ class PlayStatusPacket extends DataPacket{
 		$this->putInt($this->status);
 	}
 
-}
+}}

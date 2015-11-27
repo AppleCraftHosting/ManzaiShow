@@ -51,4 +51,4 @@ class Skull extends Spawnable{
 		]);
 	}
 
-}
+}}

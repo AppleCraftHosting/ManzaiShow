@@ -42,4 +42,4 @@ class SetTimePacket extends DataPacket{
 		$this->putByte($this->started ? 0x80 : 0x00);
 	}
 
-}
+}}

@@ -26,5 +26,4 @@ class Paper extends Item{
 		parent::__construct(self::PAPER, $meta, $count, "Paper");
 	}
 
-}
-
+}}

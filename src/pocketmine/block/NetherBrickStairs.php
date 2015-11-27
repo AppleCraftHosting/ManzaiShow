@@ -44,4 +44,5 @@ class NetherBrickStairs extends Stair{
 		$this->meta = $meta;
 	}
 
-}
+
+

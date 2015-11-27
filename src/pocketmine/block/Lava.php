@@ -69,4 +69,4 @@ class Lava extends Liquid{
 		return $ret;
 	}
 
-}
+}}

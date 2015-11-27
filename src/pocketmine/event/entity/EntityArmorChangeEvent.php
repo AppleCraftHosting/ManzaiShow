@@ -57,4 +57,6 @@ class EntityArmorChangeEvent extends EntityEvent implements Cancellable{
 	}
 
 
-}
+
+
+

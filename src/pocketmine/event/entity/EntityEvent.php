@@ -33,4 +33,4 @@ abstract class EntityEvent extends Event{
 	public function getEntity(){
 		return $this->entity;
 	}
-}
+

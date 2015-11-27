@@ -263,4 +263,5 @@ abstract class BaseChunk extends BaseFullChunk implements Chunk{
 		return $this->sections;
 	}
 
-}
+
+

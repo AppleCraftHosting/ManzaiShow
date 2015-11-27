@@ -47,4 +47,4 @@ class PackedIce extends Transparent{
 	public function getDrops(Item $item){
 		return [];
 	}
-}
+

@@ -17,4 +17,5 @@
 
 class ClassCastException extends InvalidArgumentException{
 
-}
+
+

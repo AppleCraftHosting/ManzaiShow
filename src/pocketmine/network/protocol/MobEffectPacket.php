@@ -52,4 +52,4 @@ class MobEffectPacket extends DataPacket{
 		$this->putInt($this->duration);
 	}
 
-}
+}}

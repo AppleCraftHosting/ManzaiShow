@@ -23,4 +23,5 @@ namespace pocketmine\inventory;
 
 class BigShapelessRecipe extends ShapelessRecipe{
 
-}
+
+

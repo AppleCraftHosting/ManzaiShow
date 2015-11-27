@@ -45,4 +45,4 @@ abstract class Flowable extends Transparent{
 	public function getBoundingBox(){
 		return null;
 	}
-}
+

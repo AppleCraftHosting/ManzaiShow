@@ -38,4 +38,4 @@ class Byte extends NamedTag{
 	public function write(NBT $nbt){
 		$nbt->putByte($this->value);
 	}
-}
+

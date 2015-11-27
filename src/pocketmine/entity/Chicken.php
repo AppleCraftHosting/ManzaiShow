@@ -26,4 +26,4 @@ class Chicken extends Animal{
 	public function getName() {
 		return "Chicken";
 	}
-}
+}}

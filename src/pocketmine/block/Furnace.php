@@ -29,4 +29,4 @@ class Furnace extends BurningFurnace{
 	public function getName(){
 		return "Furnace";
 	}
-}
+

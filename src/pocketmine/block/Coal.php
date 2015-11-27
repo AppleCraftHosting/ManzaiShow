@@ -53,4 +53,4 @@ class Coal extends Solid{
 			return [];
 		}
 	}
-}
+

@@ -39,4 +39,4 @@ class DropItemPacket extends DataPacket{
 
 	}
 
-}
+}}

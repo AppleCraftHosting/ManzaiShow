@@ -105,4 +105,4 @@ class EnchantingTable extends Transparent{
 			return [];
 		}
 	}
-}
+

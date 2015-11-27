@@ -59,4 +59,4 @@ class Dirt extends Solid{
 
 		return false;
 	}
-}
+

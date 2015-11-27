@@ -66,4 +66,5 @@ interface Metadatable{
 	 */
 	public function removeMetadata($metadataKey, Plugin $owningPlugin);
 
-}
+
+

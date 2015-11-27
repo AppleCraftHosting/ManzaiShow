@@ -52,4 +52,5 @@ class PlayerJoinEvent extends PlayerEvent{
 		return $this->joinMessage;
 	}
 
-}
+
+

@@ -42,4 +42,4 @@ class SetSpawnPositionPacket extends DataPacket{
 		$this->putInt($this->z);
 	}
 
-}
+}}

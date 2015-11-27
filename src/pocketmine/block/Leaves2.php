@@ -152,4 +152,4 @@ class Leaves2 extends Leaves{
 
 		return $drops;
 	}
-}
+

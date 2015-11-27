@@ -96,4 +96,4 @@ class Torch extends Flowable{
 			[$this->id, 0, 1],
 		];
 	}
-}
+

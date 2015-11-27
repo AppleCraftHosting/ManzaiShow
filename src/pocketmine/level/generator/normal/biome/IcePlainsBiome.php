@@ -42,4 +42,4 @@ class IcePlainsBiome extends SnowyBiome{
 	public function getName(){
 		return "Ice Plains";
 	}
-}
+

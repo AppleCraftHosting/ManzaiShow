@@ -36,4 +36,4 @@ interface SlotType{
 	const HOTBAR = 4;
 
 	const FUEL = 5;
-}
+

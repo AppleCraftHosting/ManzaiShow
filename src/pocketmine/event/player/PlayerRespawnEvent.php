@@ -55,4 +55,4 @@ class PlayerRespawnEvent extends PlayerEvent{
 	public function setRespawnPosition(Position $position){
 		$this->position = $position;
 	}
-}
+

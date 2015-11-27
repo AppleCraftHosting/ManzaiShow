@@ -84,4 +84,4 @@ interface Logger{
      * @param string $message
      */
     public function log($level, $message);
-}
+

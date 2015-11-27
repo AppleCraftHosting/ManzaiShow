@@ -84,4 +84,4 @@ class PumpkinStem extends Crops{
 			[Item::PUMPKIN_SEEDS, 0, mt_rand(0, 2)],
 		];
 	}
-}
+

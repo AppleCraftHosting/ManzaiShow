@@ -53,4 +53,4 @@ class Diamond extends Solid{
 			return [];
 		}
 	}
-}
+

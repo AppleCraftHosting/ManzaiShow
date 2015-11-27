@@ -45,4 +45,4 @@ class PlayerAchievementAwardedEvent extends PlayerEvent implements Cancellable{
 	public function getAchievement(){
 		return $this->achievement;
 	}
-}
+

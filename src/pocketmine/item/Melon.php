@@ -30,5 +30,4 @@ class Melon extends Item implements Food{
                 return true;
         }
 
-}
-
+}}

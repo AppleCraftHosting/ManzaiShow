@@ -42,4 +42,4 @@ class PlainBiome extends GrassyBiome{
 	public function getName(){
 		return "Plains";
 	}
-}
+

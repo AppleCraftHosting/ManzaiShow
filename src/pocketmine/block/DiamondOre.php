@@ -53,4 +53,4 @@ class DiamondOre extends Solid{
 			return [];
 		}
 	}
-}
+

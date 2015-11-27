@@ -46,4 +46,5 @@ class InventoryCloseEvent extends InventoryEvent{
 		return $this->who;
 	}
 
-}
+
+

@@ -26,5 +26,4 @@ class Gunpowder extends Item{
 		parent::__construct(self::GUNPOWDER, $meta, $count, "Gunpowder");
 	}
 
-}
-
+}}

@@ -34,4 +34,4 @@ abstract class SnowyBiome extends NormalBiome{
 			Block::get(Block::DIRT, 0),
 		]);
 	}
-}
+

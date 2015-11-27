@@ -71,4 +71,5 @@ class Stone extends Solid{
 		}
 	}
 
-}
+
+

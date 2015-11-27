@@ -55,4 +55,4 @@ class Mooshroom extends Animal{
 	public function getDrops(){
 		return [];
 	}
-}
+}}

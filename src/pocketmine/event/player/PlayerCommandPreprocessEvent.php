@@ -69,4 +69,5 @@ class PlayerCommandPreprocessEvent extends PlayerEvent implements Cancellable{
 		$this->player = $player;
 	}
 
-}
+
+

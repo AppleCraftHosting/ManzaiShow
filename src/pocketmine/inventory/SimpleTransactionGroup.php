@@ -162,4 +162,4 @@ class SimpleTransactionGroup implements TransactionGroup{
 	public function hasExecuted(){
 		return $this->hasExecuted;
 	}
-}
+

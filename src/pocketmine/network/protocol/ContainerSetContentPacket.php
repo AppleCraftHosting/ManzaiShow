@@ -72,4 +72,5 @@ class ContainerSetContentPacket extends DataPacket{
 		}
 	}
 
-}
+
+

@@ -63,4 +63,4 @@ class EndPortalFrame extends Solid{
 			$this->z + 1
 		);
 	}
-}
+

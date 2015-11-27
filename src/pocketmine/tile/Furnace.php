@@ -285,4 +285,4 @@ class Furnace extends Tile implements InventoryHolder, Container, Nameable{
 
 		return $ret;
 	}
-}
+}}

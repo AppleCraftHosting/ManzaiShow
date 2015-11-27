@@ -74,4 +74,4 @@ class LitRedstoneLamp extends Solid{
 		$drops[] = [Item::REDSTONE_LAMP, 0, 1];
 		return $drops;
 	}
-}
+}}

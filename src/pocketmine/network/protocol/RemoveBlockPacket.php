@@ -43,4 +43,4 @@ class RemoveBlockPacket extends DataPacket{
 
 	}
 
-}
+}}

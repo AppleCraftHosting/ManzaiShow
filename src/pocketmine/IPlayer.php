@@ -75,4 +75,4 @@ interface IPlayer extends ServerOperator{
 	 */
 	public function hasPlayedBefore();
 
-}
+}}

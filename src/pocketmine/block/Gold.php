@@ -53,4 +53,4 @@ class Gold extends Solid{
 			return [];
 		}
 	}
-}
+

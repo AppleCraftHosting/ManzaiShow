@@ -53,4 +53,4 @@ class Glowstone extends Transparent{
 			[Item::GLOWSTONE_DUST, 0, mt_rand(2, 4)],
 		];
 	}
-}
+

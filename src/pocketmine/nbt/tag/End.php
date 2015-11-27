@@ -36,4 +36,4 @@ class End extends Tag{
 	public function write(NBT $nbt){
 
 	}
-}
+

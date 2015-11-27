@@ -90,4 +90,4 @@ class StoneWall extends Transparent{
 		return ($block->getId() !== self::COBBLE_WALL and $block->getId() !== self::FENCE_GATE) ? $block->isSolid() and !$block->isTransparent() : true;
 	}
 
-}
+}}

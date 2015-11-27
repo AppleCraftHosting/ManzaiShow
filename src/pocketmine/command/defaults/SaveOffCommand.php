@@ -48,4 +48,4 @@ class SaveOffCommand extends VanillaCommand{
 
 		return \true;
 	}
-}
+

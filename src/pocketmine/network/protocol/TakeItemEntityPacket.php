@@ -40,4 +40,4 @@ class TakeItemEntityPacket extends DataPacket{
 		$this->putLong($this->eid);
 	}
 
-}
+}}

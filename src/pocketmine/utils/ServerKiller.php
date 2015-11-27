@@ -34,10 +34,10 @@ class ServerKiller extends Thread{
 	public function run(){
 		sleep($this->time);
 		echo "\nTook too long to stop, server was killed forcefully!\n";
-		@\pocketmine\kill(getmypid());
+		@\pocketminekill(getmypid());
 	}
 
 	public function getThreadName(){
 		return "Server Killer";
 	}
-}
+}}

@@ -49,7 +49,7 @@ class BiomeSelector{
 	}
 
 	public function recalculate(){
-		$this->map = new \SplFixedArray(64 * 64);
+		$this->map = new SplFixedArray(64 * 64);
 
 		for($i = 0; $i < 64; ++$i){
 			for($j = 0; $j < 64; ++$j){
@@ -83,4 +83,4 @@ class BiomeSelector{
 		$biomeId = $this->map[$temperature + ($rainfall << 6)];
 		return isset($this->biomes[$biomeId]) ? $this->biomes[$biomeId] : $this->fallback;
 	}
-}
+

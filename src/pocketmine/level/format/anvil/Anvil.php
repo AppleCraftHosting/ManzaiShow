@@ -178,4 +178,4 @@ class Anvil extends McRegion{
 
 		return true;
 	}
-}
+

@@ -97,4 +97,5 @@ class Fire extends Flowable{
 		return false;
 	}
 
-}
+
+

@@ -48,4 +48,5 @@ class BrickStairs extends Stair{
 		return "Brick Stairs";
 	}
 
-}
+
+

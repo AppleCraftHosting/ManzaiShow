@@ -38,4 +38,4 @@ class Short extends NamedTag{
 	public function write(NBT $nbt){
 		$nbt->putShort($this->value);
 	}
-}
+

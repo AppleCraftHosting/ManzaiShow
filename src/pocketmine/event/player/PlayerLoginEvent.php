@@ -46,4 +46,5 @@ class PlayerLoginEvent extends PlayerEvent implements Cancellable{
 		return $this->kickMessage;
 	}
 
-}
+
+

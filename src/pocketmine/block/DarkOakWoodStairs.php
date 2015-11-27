@@ -45,4 +45,4 @@ class DarkOakWoodStairs extends Stair{
 			[$this->id, 0, 1],
 		];
 	}
-}
+

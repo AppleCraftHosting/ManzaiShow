@@ -38,4 +38,4 @@ class RemoveEntityPacket extends DataPacket{
 		$this->putLong($this->eid);
 	}
 
-}
+}}

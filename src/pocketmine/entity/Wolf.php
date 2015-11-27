@@ -47,4 +47,4 @@ class Wolf extends Animal implements Tameable{
 
 		parent::spawnTo($player);
 	}
-}
+}}
