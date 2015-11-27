@@ -191,8 +191,8 @@ class ServerScheduler{
 			}
 		}elseif($task instanceof CallbackTask and Server::getInstance()->getProperty("settings.deprecated-verbose", true)){
 			$callable = $task->getCallable();
-			if(\is_array($callable)){
-				if(\is_object($callable[0])){
+			if(is_array($callable)){
+				if(is_object($callable[0])){
 					$taskName = "Callback#" . \get_class($callable[0]) . "::" . $callable[1];
 				}else{
 					$taskName = "Callback#" . $callable[0] . "::" . $callable[1];
@@ -267,7 +267,7 @@ class ServerScheduler{
 	}
 
 	private function isReady($currentTicks){
-		return \count($this->tasks) > 0 and $this->queue->current()->getNextRun() <= $currentTicks;
+		return count($this->tasks) > 0 and $this->queue->current()->getNextRun() <= $currentTicks;
 	}
 
 	/**

@@ -53,7 +53,7 @@ class TimingsHandler{
 			$this->parent = $parent;
 		}
 
-		self::$HANDLERS[\spl_object_hash($this)] = $this;
+		self::$HANDLERS[spl_object_hash($this)] = $this;
 	}
 
 	public static function printTimings($fp){
@@ -77,7 +77,7 @@ class TimingsHandler{
 		$entities = 0;
 		$livingEntities = 0;
 		foreach(Server::getInstance()->getLevels() as $level){
-			$entities += \count($level->getEntities());
+			$entities += count($level->getEntities());
 			foreach($level->getEntities() as $e){
 				if($e instanceof Living){
 					++$livingEntities;
@@ -103,7 +103,7 @@ class TimingsHandler{
 			if($measure){
 				foreach(self::$HANDLERS as $timings){
 					if($timings->curTickTotal > 0.05){
-						$timings->violations += \round($timings->curTickTotal / 0.05);
+						$timings->violations += round($timings->curTickTotal / 0.05);
 					}
 					$timings->curTickTotal = 0;
 					$timings->curCount = 0;
@@ -160,7 +160,7 @@ class TimingsHandler{
 	}
 
 	public function remove(){
-		unset(self::$HANDLERS[\spl_object_hash($this)]);
+		unset(self::$HANDLERS[spl_object_hash($this)]);
 	}
 
 }

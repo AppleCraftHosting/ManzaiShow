@@ -137,7 +137,7 @@ class SessionManager{
 			$this->sendBytes = 0;
 			$this->receiveBytes = 0;
 
-			if(\count($this->block) > 0){
+			if(count($this->block) > 0){
 				\asort($this->block);
 				$now = \microtime(true);
 				foreach($this->block as $address => $timeout){
@@ -225,7 +225,7 @@ class SessionManager{
     }
 
     public function receiveStream(){
-        if(\strlen($packet = $this->server->readMainToThreadPacket()) > 0){
+        if(strlen($packet = $this->server->readMainToThreadPacket()) > 0){
             $id = \ord($packet{0});
             $offset = 1;
             if($id === RakLib::PACKET_ENCAPSULATED){

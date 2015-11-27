@@ -134,21 +134,21 @@ class Session{
         }
         $this->isActive = false;
 
-        if(\count($this->ACKQueue) > 0){
+        if(count($this->ACKQueue) > 0){
             $pk = new ACK();
             $pk->packets = $this->ACKQueue;
             $this->sendPacket($pk);
             $this->ACKQueue = [];
         }
 
-        if(\count($this->NACKQueue) > 0){
+        if(count($this->NACKQueue) > 0){
             $pk = new NACK();
             $pk->packets = $this->NACKQueue;
             $this->sendPacket($pk);
             $this->NACKQueue = [];
         }
 
-        if(\count($this->packetToSend) > 0){
+        if(count($this->packetToSend) > 0){
 			$limit = 16;
             foreach($this->packetToSend as $k => $pk){
                 $pk->sendTime = $time;
@@ -162,14 +162,14 @@ class Session{
 				}
             }
 
-			if(\count($this->packetToSend) > self::$WINDOW_SIZE){
+			if(count($this->packetToSend) > self::$WINDOW_SIZE){
 				$this->packetToSend = [];
 			}
         }
 
-        if(\count($this->needACK) > 0){
+        if(count($this->needACK) > 0){
             foreach($this->needACK as $identifierACK => $indexes){
-                if(\count($indexes) === 0){
+                if(count($indexes) === 0){
                     unset($this->needACK[$identifierACK]);
                     $this->sessionManager->notifyACK($this, $identifierACK);
                 }
@@ -178,7 +178,7 @@ class Session{
 
 
 		foreach($this->recoveryQueue as $seq => $pk){
-			if($pk->sendTime < (\time() - 8)){
+			if($pk->sendTime < (time() - 8)){
 				$this->packetToSend[] = $pk;
 				unset($this->recoveryQueue[$seq]);
 			}else{
@@ -206,7 +206,7 @@ class Session{
     }
 
     public function sendQueue(){
-        if(\count($this->sendQueue->packets) > 0){
+        if(count($this->sendQueue->packets) > 0){
             $this->sendQueue->seqNumber = $this->sendSeqNumber++;
 			$this->sendPacket($this->sendQueue);
             $this->sendQueue->sendTime = \microtime(true);
@@ -316,7 +316,7 @@ class Session{
 			$this->splitPackets[$packet->splitID][$packet->splitIndex] = $packet;
 		}
 
-		if(\count($this->splitPackets[$packet->splitID]) === $packet->splitCount){
+		if(count($this->splitPackets[$packet->splitID]) === $packet->splitCount){
 			$pk = new EncapsulatedPacket();
 			$pk->buffer = "";
 			for($i = 0; $i < $packet->splitCount; ++$i){
@@ -344,7 +344,7 @@ class Session{
 				$this->reliableWindowEnd++;
 				$this->handleEncapsulatedPacketRoute($packet);
 
-				if(\count($this->reliableWindow) > 0){
+				if(count($this->reliableWindow) > 0){
 					\ksort($this->reliableWindow);
 
 					foreach($this->reliableWindow as $index => $pk){

@@ -188,7 +188,7 @@ class PermissibleBase implements Permissible{
 	}
 
 	public function clearPermissions(){
-		foreach(\array_keys($this->permissions) as $name){
+		foreach(array_keys($this->permissions) as $name){
 			Server::getInstance()->getPluginManager()->unsubscribeFromPermission($name, $this->parent !== null ? $this->parent : $this);
 		}
 

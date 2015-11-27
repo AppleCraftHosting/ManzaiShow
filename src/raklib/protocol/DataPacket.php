@@ -40,7 +40,7 @@ abstract class DataPacket extends Packet{
 
     public function encode(){
         parent::encode();
-        $this->buffer .= \substr(\pack("V", $this->seqNumber), 0, -1);
+        $this->buffer .= substr(\pack("V", $this->seqNumber), 0, -1);
         foreach($this->packets as $packet){
             $this->buffer .= $packet instanceof EncapsulatedPacket ? $packet->toBinary() : (string) $packet;
         }
@@ -64,7 +64,7 @@ abstract class DataPacket extends Packet{
 			$data = \substr($this->buffer, $this->offset);
             $packet = EncapsulatedPacket::fromBinary($data, false, $offset);
             $this->offset += $offset;
-            if(\strlen($packet->buffer) === 0){
+            if(strlen($packet->buffer) === 0){
                 break;
             }
             $this->packets[] = $packet;

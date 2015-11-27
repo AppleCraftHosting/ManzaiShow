@@ -126,10 +126,10 @@ class AsyncPool{
 				$this->removeTask($task);
 			}
 
-			if(\count($this->tasks) > 0){
+			if(count($this->tasks) > 0){
 				\usleep(25000);
 			}
-		}while(\count($this->tasks) > 0);
+		}while(count($this->tasks) > 0);
 
 		for($i = 0; $i < $this->size; ++$i){
 			$this->workerUsage[$i] = 0;

@@ -137,9 +137,9 @@ class MainLogger extends \AttachableThreadedLogger{
 		if(($pos = strpos($errstr, "\n")) !== false){
 			$errstr = substr($errstr, 0, $pos);
 		}
-		$errfile = \pocketmine\cleanPath($errfile);
+		$errfile = \pocketminecleanPath($errfile);
 		$this->log($type, get_class($e) . ": \"$errstr\" ($errno) in \"$errfile\" at line $errline");
-		foreach(@\pocketmine\getTrace(1, $trace) as $i => $line){
+		foreach(@\pocketminegetTrace(1, $trace) as $i => $line){
 			$this->debug($line);
 		}
 	}

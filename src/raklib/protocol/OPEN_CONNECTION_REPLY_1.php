@@ -38,8 +38,8 @@ class OPEN_CONNECTION_REPLY_1 extends Packet{
         parent::encode();
         $this->buffer .= RakLib::MAGIC;
         $this->buffer .= Binary::writeLong($this->serverID);
-        $this->buffer .= \chr(0); //Server security
-        $this->buffer .= \pack("n", $this->mtuSize);
+        $this->buffer .= chr(0); //Server security
+        $this->buffer .= pack("n", $this->mtuSize);
     }
 
     public function decode(){

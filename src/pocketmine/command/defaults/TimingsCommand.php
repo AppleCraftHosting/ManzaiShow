@@ -44,7 +44,7 @@ class TimingsCommand extends VanillaCommand{
 			return true;
 		}
 
-		if(\count($args) !== 1){
+		if(count($args) !== 1){
 			$sender->sendMessage(new TranslationContainer("commands.generic.usage", [$this->usageMessage]));
 
 			return true;
@@ -85,7 +85,7 @@ class TimingsCommand extends VanillaCommand{
 				\mkdir($timingFolder, 0777);
 			}
 			$timings = $timingFolder . "timings.txt";
-			while(\file_exists($timings)){
+			while(file_exists($timings)){
 				$timings = $timingFolder . "timings" . (++$index) . ".txt";
 			}
 
@@ -100,7 +100,7 @@ class TimingsCommand extends VanillaCommand{
 				$data = [
 					"syntax" => "text",
 					"poster" => $sender->getServer()->getName(),
-					"content" => \stream_get_contents($fileTimings)
+					"content" => stream_get_contents($fileTimings)
 				];
 
 				$ch = \curl_init("http://paste.ubuntu.com/");
@@ -117,7 +117,7 @@ class TimingsCommand extends VanillaCommand{
 				\curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 				$data = \curl_exec($ch);
 				\curl_close($ch);
-				if(\preg_match('#^Location: http://paste\\.ubuntu\\.com/([0-9]{1,})/#m', $data, $matches) == 0){
+				if(preg_match('#^Location: http://paste\\.ubuntu\\.com/([0-9]{1,})/#m', $data, $matches) == 0){
 					$sender->sendMessage(new TranslationContainer("pocketmine.command.timings.pasteError"));
 
 					return true;

@@ -191,7 +191,7 @@ class Matrix implements \ArrayAccess{
 	public function __toString(){
 		$s = "";
 		for($r = 0; $r < $this->rows; ++$r){
-			$s .= \implode(",", $this->matrix[$r]) . ";";
+			$s .= implode(",", $this->matrix[$r]) . ";";
 		}
 
 		return "Matrix({$this->rows}x{$this->columns};" . \substr($s, 0, -1) . ")";

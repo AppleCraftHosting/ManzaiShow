@@ -40,7 +40,7 @@ class OPEN_CONNECTION_REQUEST_2 extends Packet{
         parent::encode();
         $this->buffer .= RakLib::MAGIC;
 		$this->putAddress($this->serverAddress, $this->serverPort, 4);
-        $this->buffer .= \pack("n", $this->mtuSize);
+        $this->buffer .= pack("n", $this->mtuSize);
         $this->buffer .= Binary::writeLong($this->clientID);
     }
 

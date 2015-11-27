@@ -6,7 +6,7 @@
  *
  */
 
-\define("YAML_ANY_SCALAR_STYLE", 0);
+define("YAML_ANY_SCALAR_STYLE", 0);
 \define("YAML_PLAIN_SCALAR_STYLE", 1);
 \define("YAML_SINGLE_QUOTED_SCALAR_STYLE", 0);
 \define("YAML_DOUBLE_QUOTED_SCALAR_STYLE", 0);

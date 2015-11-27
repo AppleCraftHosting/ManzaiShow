@@ -49,18 +49,18 @@ class InstallerLang{
 	private $langfile;
 
 	public function __construct($lang = ""){
-		if(\file_exists(\pocketmine\PATH . "src/pocketmine/lang/Installer/" . $lang . ".ini")){
+		if(file_exists(\pocketmine\PATH . "src/pocketmine/lang/Installer/" . $lang . ".ini")){
 			$this->lang = $lang;
 			$this->langfile = \pocketmine\PATH . "src/pocketmine/lang/Installer/" . $lang . ".ini";
 		}else{
 			$files = [];
 			foreach(new \DirectoryIterator(\pocketmine\PATH . "src/pocketmine/lang/Installer/") as $file){
-				if($file->getExtension() === "ini" and \substr($file->getFilename(), 0, 2) === $lang){
+				if($file->getExtension() === "ini" and substr($file->getFilename(), 0, 2) === $lang){
 					$files[$file->getFilename()] = $file->getSize();
 				}
 			}
 
-			if(\count($files) > 0){
+			if(count($files) > 0){
 				\arsort($files);
 				\reset($files);
 				$l = \key($files);
@@ -104,8 +104,8 @@ class InstallerLang{
 			}else{
 				return $name;
 			}
-		}elseif(\count($search) > 0){
-			return \str_replace($search, $replace, $this->texts[$this->lang][$name]);
+		}elseif(count($search) > 0){
+			return str_replace($search, $replace, $this->texts[$this->lang][$name]);
 		}else{
 			return $this->texts[$this->lang][$name];
 		}

@@ -130,8 +130,8 @@ class BanList{
 
 	public function load(){
 		$this->list = [];
-		$fp = @\fopen($this->file, "r");
-		if(\is_resource($fp)){
+		$fp = @fopen($this->file, "r");
+		if(is_resource($fp)){
 			while(($line = \fgets($fp)) !== false){
 				if($line{0} !== "#"){
 					$entry = BanEntry::fromString($line);
@@ -148,8 +148,8 @@ class BanList{
 
 	public function save($flag = true){
 		$this->removeExpired();
-		$fp = @\fopen($this->file, "w");
-		if(\is_resource($fp)){
+		$fp = @fopen($this->file, "w");
+		if(is_resource($fp)){
 			if($flag === true){
 				\fwrite($fp, "# Updated " . \strftime("%x %H:%M", \time()) . " by " . Server::getInstance()->getName() . " " . Server::getInstance()->getPocketMineVersion() . "\n");
 				\fwrite($fp, "# victim name | ban date | banned by | banned until | reason\n\n");

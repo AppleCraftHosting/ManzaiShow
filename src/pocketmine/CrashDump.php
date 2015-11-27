@@ -42,7 +42,7 @@ class CrashDump{
 		$this->time = \time();
 		$this->server = $server;
 		$this->path = $this->server->getDataPath() . "CrashDump_" . \date("D_M_j-H.i.s-T_Y", $this->time) . ".log";
-		$this->fp = @\fopen($this->path, "wb");
+		$this->fp = @fopen($this->path, "wb");
 		if(!\is_resource($this->fp)){
 			throw new \RuntimeException("Could not create Crash Dump");
 		}
@@ -76,14 +76,14 @@ class CrashDump{
 		$this->addLine();
 		$this->addLine("===BEGIN CRASH DUMP===");
 		$this->encodedData = \zlib_encode(\json_encode($this->data, JSON_UNESCAPED_SLASHES), ZLIB_ENCODING_DEFLATE, 9);
-		foreach(\str_split(\base64_encode($this->encodedData), 76) as $line){
+		foreach(str_split(\base64_encode($this->encodedData), 76) as $line){
 			$this->addLine($line);
 		}
 		$this->addLine("===END CRASH DUMP===");
 	}
 
 	private function pluginsData(){
-		if(\class_exists("pocketmine\\plugin\\PluginManager", false)){
+		if(class_exists("pocketmine\\plugin\\PluginManager", false)){
 			$this->addLine();
 			$this->addLine("Loaded plugins:");
 			$this->data["plugins"] = [];
@@ -111,16 +111,16 @@ class CrashDump{
 
 		if($this->server->getProperty("auto-report.send-settings", true) !== false){
 			$this->data["parameters"] = (array) $arguments;
-			$this->data["server.properties"] = @\file_get_contents($this->server->getDataPath() . "server.properties");
+			$this->data["server.properties"] = @file_get_contents($this->server->getDataPath() . "server.properties");
 			$this->data["server.properties"] = \preg_replace("#^rcon\\.password=(.*)$#m", "rcon.password=******", $this->data["server.properties"]);
-			$this->data["pocketmine.yml"] = @\file_get_contents($this->server->getDataPath() . "pocketmine.yml");
+			$this->data["pocketmine.yml"] = @file_get_contents($this->server->getDataPath() . "pocketmine.yml");
 		}else{
 			$this->data["pocketmine.yml"] = "";
 			$this->data["server.properties"] = "";
 			$this->data["parameters"] = [];
 		}
 		$extensions = [];
-		foreach(\get_loaded_extensions() as $ext){
+		foreach(get_loaded_extensions() as $ext){
 			$extensions[$ext] = \phpversion($ext);
 		}
 		$this->data["extensions"] = $extensions;
@@ -139,7 +139,7 @@ class CrashDump{
 		if(isset($lastExceptionError)){
 			$error = $lastExceptionError;
 		}else{
-			$error = (array) \error_get_last();
+			$error = (array) error_get_last();
 			$error["trace"] = @getTrace(3);
 			$errorConversion = [
 				E_ERROR => "E_ERROR",
@@ -178,7 +178,7 @@ class CrashDump{
 		$this->addLine("Line: " . $error["line"]);
 		$this->addLine("Type: " . $error["type"]);
 
-		if(\strpos($error["file"], "src/pocketmine/") === false and \strpos($error["file"], "src/raklib/") === false and \file_exists($error["fullFile"])){
+		if(strpos($error["file"], "src/pocketmine/") === false and strpos($error["file"], "src/raklib/") === false and file_exists($error["fullFile"])){
 			$this->addLine();
 			$this->addLine("THIS CRASH WAS CAUSED BY A PLUGIN");
 			$this->data["plugin"] = true;
@@ -187,8 +187,8 @@ class CrashDump{
 			$file = $reflection->getProperty("file");
 			$file->setAccessible(true);
 			foreach($this->server->getPluginManager()->getPlugins() as $plugin){
-				$filePath = \pocketmine\cleanPath($file->getValue($plugin));
-				if(\strpos($error["file"], $filePath) === 0){
+				$filePath = \pocketminecleanPath($file->getValue($plugin));
+				if(strpos($error["file"], $filePath) === 0){
 					$this->data["plugin"] = $plugin->getName();
 					$this->addLine("BAD PLUGIN: " . $plugin->getDescription()->getFullName());
 					break;
@@ -203,7 +203,7 @@ class CrashDump{
 		$this->data["code"] = [];
 
 		if($this->server->getProperty("auto-report.send-code", true) !== false){
-			$file = @\file($error["fullFile"], FILE_IGNORE_NEW_LINES);
+			$file = @file($error["fullFile"], FILE_IGNORE_NEW_LINES);
 			for($l = \max(0, $error["line"] - 10); $l < $error["line"] + 10; ++$l){
 				$this->addLine("[" . ($l + 1) . "] " . @$file[$l]);
 				$this->data["code"][$l + 1] = @$file[$l];

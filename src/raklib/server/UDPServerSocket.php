@@ -56,7 +56,7 @@ class UDPServerSocket{
      * @return int
      */
     public function readPacket(&$buffer, &$source, &$port){
-        return \socket_recvfrom($this->socket, $buffer, 65535, 0, $source, $port);
+        return socket_recvfrom($this->socket, $buffer, 65535, 0, $source, $port);
     }
 
     /**
@@ -67,7 +67,7 @@ class UDPServerSocket{
      * @return int
      */
     public function writePacket($buffer, $dest, $port){
-        return \socket_sendto($this->socket, $buffer, \strlen($buffer), 0, $dest, $port);
+        return socket_sendto($this->socket, $buffer, \strlen($buffer), 0, $dest, $port);
     }
 
     /**
@@ -76,7 +76,7 @@ class UDPServerSocket{
      * @return $this
      */
     public function setSendBuffer($size){
-        @\socket_set_option($this->socket, SOL_SOCKET, SO_SNDBUF, $size);
+        @socket_set_option($this->socket, SOL_SOCKET, SO_SNDBUF, $size);
 
         return $this;
     }
@@ -87,7 +87,7 @@ class UDPServerSocket{
      * @return $this
      */
     public function setRecvBuffer($size){
-        @\socket_set_option($this->socket, SOL_SOCKET, SO_RCVBUF, $size);
+        @socket_set_option($this->socket, SOL_SOCKET, SO_RCVBUF, $size);
 
         return $this;
     }

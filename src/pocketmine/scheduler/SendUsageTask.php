@@ -65,9 +65,9 @@ class SendUsageTask extends AsyncTask{
 					"operatingSystem" => Utils::getOS(),
 					"cores" => Utils::getCoreCount(),
 					"phpVersion" => PHP_VERSION,
-					"machine" => \php_uname("a"),
-					"release" => \php_uname("r"),
-					"platform" => \php_uname("i")
+					"machine" => php_uname("a"),
+					"release" => php_uname("r"),
+					"platform" => php_uname("i")
 				];
 
 				$data["players"] = [
@@ -113,10 +113,10 @@ class SendUsageTask extends AsyncTask{
 				}
 
 				$data["players"] = [
-					"count" => \count($players),
+					"count" => count($players),
 					"limit" => $server->getMaxPlayers(),
 					"currentList" => $players,
-					"historyList" => \array_values($playerList)
+					"historyList" => array_values($playerList)
 				];
 
 				$info = Utils::getMemoryUsage(true);

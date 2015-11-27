@@ -179,7 +179,7 @@ class SimpleCommandMap implements CommandMap{
 	public function dispatch(CommandSender $sender, $commandLine){
 		$args = \explode(" ", $commandLine);
 
-		if(\count($args) === 0){
+		if(count($args) === 0){
 			return false;
 		}
 
@@ -237,7 +237,7 @@ class SimpleCommandMap implements CommandMap{
 		$values = $this->server->getCommandAliases();
 
 		foreach($values as $alias => $commandStrings){
-			if(\strpos($alias, ":") !== false or \strpos($alias, " ") !== false){
+			if(strpos($alias, ":") !== false or strpos($alias, " ") !== false){
 				$this->server->getLogger()->warning($this->server->getLanguage()->translateString("pocketmine.command.alias.illegal", [$alias]));
 				continue;
 			}
@@ -250,7 +250,7 @@ class SimpleCommandMap implements CommandMap{
 				$command = $this->getCommand($args[0]);
 
 				if($command === null){
-					if(\strlen($bad) > 0){
+					if(strlen($bad) > 0){
 						$bad .= ", ";
 					}
 					$bad .= $commandString;
@@ -259,13 +259,13 @@ class SimpleCommandMap implements CommandMap{
 				}
 			}
 
-			if(\strlen($bad) > 0){
+			if(strlen($bad) > 0){
 				$this->server->getLogger()->warning($this->server->getLanguage()->translateString("pocketmine.command.alias.notFound", [$alias, $bad]));
 				continue;
 			}
 
 			//These registered commands have absolute priority
-			if(\count($targets) > 0){
+			if(count($targets) > 0){
 				$this->knownCommands[\strtolower($alias)] = new FormattedCommandAlias(\strtolower($alias), $targets);
 			}else{
 				unset($this->knownCommands[\strtolower($alias)]);

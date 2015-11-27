@@ -73,12 +73,12 @@ class MemoryManager{
 
 		$defaultMemory = 1024;
 
-		if(\preg_match("/([0-9]+)([KMGkmg])/", $this->server->getConfigString("memory-limit", ""), $matches) > 0){
+		if(preg_match("/([0-9]+)([KMGkmg])/", $this->server->getConfigString("memory-limit", ""), $matches) > 0){
 			$m = (int) $matches[1];
 			if($m <= 0){
 				$defaultMemory = 0;
 			}else{
-				switch(\strtoupper($matches[2])){
+				switch(strtoupper($matches[2])){
 					case "K":
 						$defaultMemory = $m / 1024;
 						break;
@@ -233,7 +233,7 @@ class MemoryManager{
 
 		$this->leakInfo[$identifier] = [
 			"id" => $id = \md5($identifier . ":" . $this->leakSeed++),
-			"class" => \get_class($object),
+			"class" => get_class($object),
 			"hash" => $identifier
 		];
 		$this->leakInfo[$id] = $this->leakInfo[$identifier];
@@ -339,7 +339,7 @@ class MemoryManager{
 					$info["parent"] = $reflection->getParentClass()->getName();
 				}
 
-				if(\count($reflection->getInterfaceNames()) > 0){
+				if(count($reflection->getInterfaceNames()) > 0){
 					$info["implements"] = \implode(", ", $reflection->getInterfaceNames());
 				}
 
@@ -393,7 +393,7 @@ class MemoryManager{
 
 		--$maxNesting;
 
-		if(\is_object($from)){
+		if(is_object($from)){
 			if(!isset($objects[$hash = \spl_object_hash($from)])){
 				$objects[$hash] = $from;
 				$refCounts[$hash] = 0;
@@ -402,7 +402,7 @@ class MemoryManager{
 			++$refCounts[$hash];
 
 			$data = "(object) $hash@" . \get_class($from);
-		}elseif(\is_array($from)){
+		}elseif(is_array($from)){
 			if($recursion >= 5){
 				$data = "(error) ARRAY RECURSION LIMIT REACHED";
 				return;
@@ -411,9 +411,9 @@ class MemoryManager{
 			foreach($from as $key => $value){
 				$this->continueDump($value, $data[$key], $objects, $refCounts, $recursion + 1, $maxNesting, $maxStringSize);
 			}
-		}elseif(\is_string($from)){
-			$data = "(string) len(".\strlen($from).") " . \substr(Utils::printable($from), 0, $maxStringSize);
-		}elseif(\is_resource($from)){
+		}elseif(is_string($from)){
+			$data = "(string) len(".strlen($from).") " . \substr(Utils::printable($from), 0, $maxStringSize);
+		}elseif(is_resource($from)){
 			$data = "(resource) " . \print_r($from, true);
 		}else{
 			$data = $from;

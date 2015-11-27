@@ -39,7 +39,7 @@ abstract class Packet{
 
             return "";
         }elseif($len === true){
-            return \substr($this->buffer, $this->offset);
+            return substr($this->buffer, $this->offset);
         }
 
         $buffer = "";
@@ -63,15 +63,15 @@ abstract class Packet{
     }
 
     protected function getTriad(){
-        return \unpack("N", "\x00" . $this->get(3))[1];
+        return unpack("N", "\x00" . $this->get(3))[1];
     }
 
     protected function getLTriad(){
-        return \unpack("V", $this->get(3) . "\x00")[1];
+        return unpack("V", $this->get(3) . "\x00")[1];
     }
 
     protected function getByte(){
-        return \ord($this->buffer{$this->offset++});
+        return ord($this->buffer{$this->offset++});
     }
 
     protected function getString(){
@@ -101,37 +101,37 @@ abstract class Packet{
     }
 
     protected function putInt($v){
-        $this->buffer .= \pack("N", $v);
+        $this->buffer .= pack("N", $v);
     }
 
     protected function putShort($v){
-        $this->buffer .= \pack("n", $v);
+        $this->buffer .= pack("n", $v);
     }
 
     protected function putTriad($v){
-        $this->buffer .= \substr(\pack("N", $v), 1);
+        $this->buffer .= substr(\pack("N", $v), 1);
     }
 
     protected function putLTriad($v){
-        $this->buffer .= \substr(\pack("V", $v), 0, -1);
+        $this->buffer .= substr(\pack("V", $v), 0, -1);
     }
 
     protected function putByte($v){
-        $this->buffer .= \chr($v);
+        $this->buffer .= chr($v);
     }
 
     protected function putString($v){
-        $this->buffer .= \pack("n", \strlen($v));
+        $this->buffer .= pack("n", \strlen($v));
         $this->buffer .= $v;
     }
     
     protected function putAddress($addr, $port, $version = 4){
-		$this->buffer .= \chr($version);
+		$this->buffer .= chr($version);
 		if($version === 4){
-			foreach(\explode(".", $addr) as $b){
-				$this->buffer .= \chr((~((int) $b)) & 0xff);
+			foreach(explode(".", $addr) as $b){
+				$this->buffer .= chr((~((int) $b)) & 0xff);
 			}
-			$this->buffer .= \pack("n", $port);
+			$this->buffer .= pack("n", $port);
 		}else{
 			//IPv6
 		}

@@ -144,7 +144,7 @@ abstract class Command{
 			return true;
 		}
 
-		foreach(\explode(";", $this->permission) as $permission){
+		foreach(explode(";", $this->permission) as $permission){
 			if($target->hasPermission($permission)){
 				return true;
 			}

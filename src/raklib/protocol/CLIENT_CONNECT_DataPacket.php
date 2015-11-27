@@ -42,7 +42,7 @@ class CLIENT_CONNECT_DataPacket extends Packet{
         parent::encode();
         $this->buffer .= Binary::writeLong($this->clientID);
         $this->buffer .= Binary::writeLong($this->sendPing);
-        $this->buffer .= \chr($this->useSecurity ? 1 : 0);
+        $this->buffer .= chr($this->useSecurity ? 1 : 0);
     }
 
     public function decode(){

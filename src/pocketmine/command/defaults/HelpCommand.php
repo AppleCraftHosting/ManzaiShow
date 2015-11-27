@@ -44,11 +44,11 @@ class HelpCommand extends VanillaCommand{
 			return true;
 		}
 
-		if(\count($args) === 0){
+		if(count($args) === 0){
 			$command = "";
 			$pageNumber = 1;
-		}elseif(\is_numeric($args[\count($args) - 1])){
-			$pageNumber = (int) \array_pop($args);
+		}elseif(is_numeric($args[count($args) - 1])){
+			$pageNumber = (int) array_pop($args);
 			if($pageNumber <= 0){
 				$pageNumber = 1;
 			}
@@ -74,7 +74,7 @@ class HelpCommand extends VanillaCommand{
 			}
 			\ksort($commands, SORT_NATURAL | SORT_FLAG_CASE);
 			$commands = \array_chunk($commands, $pageHeight);
-			$pageNumber = (int) \min(\count($commands), $pageNumber);
+			$pageNumber = (int) min(\count($commands), $pageNumber);
 			if($pageNumber < 1){
 				$pageNumber = 1;
 			}

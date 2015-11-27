@@ -41,8 +41,8 @@ class OPEN_CONNECTION_REPLY_2 extends Packet{
         $this->buffer .= RakLib::MAGIC;
         $this->buffer .= Binary::writeLong($this->serverID);
         $this->putAddress($this->clientAddress, $this->clientPort, 4);
-        $this->buffer .= \pack("n", $this->mtuSize);
-        $this->buffer .= \chr(0); //server security
+        $this->buffer .= pack("n", $this->mtuSize);
+        $this->buffer .= chr(0); //server security
     }
 
     public function decode(){

@@ -57,12 +57,12 @@ class Installer{
 		echo "[*] " . $this->lang->language_has_been_selected . "\n";
 
 		if(!$this->showLicense()){
-			\pocketmine\kill(\getmypid());
+			\pocketminekill(\getmypid());
 			exit(-1);
 		}
 
 		echo "[?] " . $this->lang->skip_installer . " (y/N): ";
-		if(\strtolower($this->getInput()) === "y"){
+		if(strtolower($this->getInput()) === "y"){
 			return;
 		}
 		echo "\n";
@@ -86,7 +86,7 @@ class Installer{
 
 LICENSE;
 		echo "\n[?] " . $this->lang->accept_license . " (y/N): ";
-		if(\strtolower($this->getInput("n")) != "y"){
+		if(strtolower($this->getInput("n")) != "y"){
 			echo "[!] " . $this->lang->you_have_to_accept_the_license . "\n";
 			\sleep(5);
 
@@ -129,7 +129,7 @@ LICENSE;
 		$config->set("max-players", (int) $this->getInput(self::DEFAULT_PLAYERS));
 		echo "[*] " . $this->lang->spawn_protection_info . "\n";
 		echo "[?] " . $this->lang->spawn_protection . " (Y/n): ";
-		if(\strtolower($this->getInput("y")) == "n"){
+		if(strtolower($this->getInput("y")) == "n"){
 			$config->set("spawn-protection", -1);
 		}else{
 			$config->set("spawn-protection", 16);
@@ -151,7 +151,7 @@ LICENSE;
 		echo "[*] " . $this->lang->whitelist_info . "\n";
 		echo "[?] " . $this->lang->whitelist_enable . " (y/N): ";
 		$config = new Config(\pocketmine\DATA . "server.properties", Config::PROPERTIES);
-		if(\strtolower($this->getInput("n")) === "y"){
+		if(strtolower($this->getInput("n")) === "y"){
 			echo "[!] " . $this->lang->whitelist_warning . "\n";
 			$config->set("white-list", true);
 		}else{
@@ -165,7 +165,7 @@ LICENSE;
 		echo "[!] " . $this->lang->query_warning1 . "\n";
 		echo "[!] " . $this->lang->query_warning2 . "\n";
 		echo "[?] " . $this->lang->query_disable . " (y/N): ";
-		if(\strtolower($this->getInput("n")) === "y"){
+		if(strtolower($this->getInput("n")) === "y"){
 			$config->set("enable-query", false);
 		}else{
 			$config->set("enable-query", true);
@@ -173,7 +173,7 @@ LICENSE;
 
 		echo "[*] " . $this->lang->rcon_info . "\n";
 		echo "[?] " . $this->lang->rcon_enable . " (y/N): ";
-		if(\strtolower($this->getInput("n")) === "y"){
+		if(strtolower($this->getInput("n")) === "y"){
 			$config->set("enable-rcon", true);
 			$password = \substr(\base64_encode(@Utils::getRandomBytes(20, false)), 3, 10);
 			$config->set("rcon.password", $password);

@@ -143,7 +143,7 @@ class RakLibServer extends \Thread{
 	}
 
 	public function errorHandler($errno, $errstr, $errfile, $errline, $context, $trace = null){
-		if(\error_reporting() === 0){
+		if(error_reporting() === 0){
 			return false;
 		}
 		$errorConversion = [
@@ -181,7 +181,7 @@ class RakLibServer extends \Thread{
 
 	public function getTrace($start = 1, $trace = null){
 		if($trace === null){
-			if(\function_exists("xdebug_get_function_stack")){
+			if(function_exists("xdebug_get_function_stack")){
 				$trace = \array_reverse(xdebug_get_function_stack());
 			}else{
 				$e = new \Exception();
@@ -200,7 +200,7 @@ class RakLibServer extends \Thread{
 					$args = $trace[$i]["params"];
 				}
 				foreach($args as $name => $value){
-					$params .= (\is_object($value) ? \get_class($value) . " " . (\method_exists($value, "__toString") ? $value->__toString() : "object") : \gettype($value) . " " . @\strval($value)) . ", ";
+					$params .= (is_object($value) ? \get_class($value) . " " . (method_exists($value, "__toString") ? $value->__toString() : "object") : \gettype($value) . " " . @strval($value)) . ", ";
 				}
 			}
 			$messages[] = "#$j " . (isset($trace[$i]["file"]) ? $this->cleanPath($trace[$i]["file"]) : "") . "(" . (isset($trace[$i]["line"]) ? $trace[$i]["line"] : "") . "): " . (isset($trace[$i]["class"]) ? $trace[$i]["class"] . (($trace[$i]["type"] === "dynamic" or $trace[$i]["type"] === "->") ? "->" : "::") : "") . $trace[$i]["function"] . "(" . \substr($params, 0, -2) . ")";
@@ -210,13 +210,13 @@ class RakLibServer extends \Thread{
 	}
 
 	public function cleanPath($path){
-		return \rtrim(\str_replace(["\\", ".php", "phar://", \rtrim(\str_replace(["\\", "phar://"], ["/", ""], $this->mainPath), "/")], ["/", "", "", ""], $path), "/");
+		return rtrim(\str_replace(["\\", ".php", "phar://", \rtrim(\str_replace(["\\", "phar://"], ["/", ""], $this->mainPath), "/")], ["/", "", "", ""], $path), "/");
 	}
 
     public function run(){
         //Load removed dependencies, can't use require_once()
         foreach($this->loadPaths as $name => $path){
-            if(!\class_exists($name, false) and !\interface_exists($name, false)){
+            if(!\class_exists($name, false) and !interface_exists($name, false)){
                 require($path);
             }
         }

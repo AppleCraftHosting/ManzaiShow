@@ -16,7 +16,7 @@
 namespace raklib;
 
 if(!\defined("ENDIANNESS")){
-    \define("ENDIANNESS", (\pack("d", 1) === "\77\360\0\0\0\0\0\0" ? Binary::BIG_ENDIAN : Binary::LITTLE_ENDIAN));
+    \define("ENDIANNESS", (pack("d", 1) === "\77\360\0\0\0\0\0\0" ? Binary::BIG_ENDIAN : Binary::LITTLE_ENDIAN));
 }
 
 class Binary{
@@ -32,7 +32,7 @@ class Binary{
      * @return mixed
      */
     public static function readTriad($str){
-        return \unpack("N", "\x00" . $str)[1];
+        return unpack("N", "\x00" . $str)[1];
     }
 
     /**
@@ -43,7 +43,7 @@ class Binary{
      * @return string
      */
     public static function writeTriad($value){
-        return \substr(\pack("N", $value), 1);
+        return substr(\pack("N", $value), 1);
     }
 
 	/**
@@ -54,7 +54,7 @@ class Binary{
 	 * @return mixed
 	 */
 	public static function readLTriad($str){
-		return \unpack("V", $str . "\x00")[1];
+		return unpack("V", $str . "\x00")[1];
 	}
 
 	/**
@@ -65,7 +65,7 @@ class Binary{
 	 * @return string
 	 */
 	public static function writeLTriad($value){
-		return \substr(\pack("V", $value), 0, -1);
+		return substr(\pack("V", $value), 0, -1);
 	}
 
     /**
@@ -120,7 +120,7 @@ class Binary{
      * @return string
      */
     public static function writeByte($c){
-        return \chr($c);
+        return chr($c);
     }
 
     /**
@@ -131,7 +131,7 @@ class Binary{
      * @return int
      */
     public static function readShort($str){
-        return \unpack("n", $str)[1];
+        return unpack("n", $str)[1];
     }
 
 	/**
@@ -143,9 +143,9 @@ class Binary{
 	 */
 	public static function readSignedShort($str){
 		if(PHP_INT_SIZE === 8){
-			return \unpack("n", $str)[1] << 48 >> 48;
+			return unpack("n", $str)[1] << 48 >> 48;
 		}else{
-			return \unpack("n", $str)[1] << 16 >> 16;
+			return unpack("n", $str)[1] << 16 >> 16;
 		}
 	}
 
@@ -157,7 +157,7 @@ class Binary{
      * @return string
      */
     public static function writeShort($value){
-        return \pack("n", $value);
+        return pack("n", $value);
     }
 
     /**
@@ -190,31 +190,31 @@ class Binary{
      * @return string
      */
     public static function writeLShort($value){
-        return \pack("v", $value);
+        return pack("v", $value);
     }
 
     public static function readInt($str){
         if(PHP_INT_SIZE === 8){
-            return \unpack("N", $str)[1] << 32 >> 32;
+            return unpack("N", $str)[1] << 32 >> 32;
         }else{
-            return \unpack("N", $str)[1];
+            return unpack("N", $str)[1];
         }
     }
 
     public static function writeInt($value){
-        return \pack("N", $value);
+        return pack("N", $value);
     }
 
     public static function readLInt($str){
         if(PHP_INT_SIZE === 8){
-            return \unpack("V", $str)[1] << 32 >> 32;
+            return unpack("V", $str)[1] << 32 >> 32;
         }else{
-            return \unpack("V", $str)[1];
+            return unpack("V", $str)[1];
         }
     }
 
     public static function writeLInt($value){
-        return \pack("V", $value);
+        return pack("V", $value);
     }
 
     public static function readFloat($str){
@@ -261,7 +261,7 @@ class Binary{
                 $value = \bcadd($value, self::readShort(\substr($x, $i, 2)), 0);
             }
 
-            if(\bccomp($value, "9223372036854775807") == 1){
+            if(bccomp($value, "9223372036854775807") == 1){
                 $value = \bcadd($value, "-18446744073709551616");
             }
 
@@ -271,11 +271,11 @@ class Binary{
 
     public static function writeLong($value){
         if(PHP_INT_SIZE === 8){
-            return \pack("NN", $value >> 32, $value & 0xFFFFFFFF);
+            return pack("NN", $value >> 32, $value & 0xFFFFFFFF);
         }else{
             $x = "";
 
-            if(\bccomp($value, "0") == -1){
+            if(bccomp($value, "0") == -1){
                 $value = \bcadd($value, "18446744073709551616");
             }
 
@@ -293,7 +293,7 @@ class Binary{
     }
 
     public static function writeLLong($value){
-        return \strrev(self::writeLong($value));
+        return strrev(self::writeLong($value));
     }
 
 }

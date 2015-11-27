@@ -62,7 +62,7 @@ class CommandReader extends Thread{
 
 	public function run(){
 		$opts = \getopt("", ["disable-readline"]);
-		if(\extension_loaded("readline") and !isset($opts["disable-readline"])){
+		if(extension_loaded("readline") and !isset($opts["disable-readline"])){
 			$this->readline = true;
 		}else{
 			$this->readline = false;
@@ -73,7 +73,7 @@ class CommandReader extends Thread{
 			if(($line = $this->readLine()) !== ""){
 				$this->buffer[] = \preg_replace("#\\x1b\\x5b([^\\x1b]*\\x7e|[\\x40-\\x50])#", "", $line);
 			}elseif((\microtime(true) - $lastLine) <= 0.1){ //Non blocking! Sleep to save CPU
-				\usleep(40000);
+				usleep(40000);
 			}
 
 			$lastLine = \microtime(true);

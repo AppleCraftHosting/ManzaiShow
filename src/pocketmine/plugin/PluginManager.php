@@ -120,7 +120,7 @@ class PluginManager{
 	 * @return boolean
 	 */
 	public function registerInterface($loaderName){
-		if(\is_subclass_of($loaderName, PluginLoader::class)){
+		if(is_subclass_of($loaderName, PluginLoader::class)){
 			$loader = new $loaderName($this->server);
 		}else{
 			return false;
@@ -146,7 +146,7 @@ class PluginManager{
 	 */
 	public function loadPlugin($path, $loaders = null){
 		foreach(($loaders === null ? $this->fileAssociations : $loaders) as $loader){
-			if(\preg_match($loader->getPluginFilters(), \basename($path)) > 0){
+			if(preg_match($loader->getPluginFilters(), \basename($path)) > 0){
 				$description = $loader->getPluginDescription($path);
 				if($description instanceof PluginDescription){
 					if(($plugin = $loader->loadPlugin($path)) instanceof Plugin){
@@ -154,7 +154,7 @@ class PluginManager{
 
 						$pluginCommands = $this->parseYamlCommands($plugin);
 
-						if(\count($pluginCommands) > 0){
+						if(count($pluginCommands) > 0){
 							$this->commandMap->registerAll($plugin->getDescription()->getName(), $pluginCommands);
 						}
 
@@ -175,12 +175,12 @@ class PluginManager{
 	 */
 	public function loadPlugins($directory, $newLoaders = null){
 
-		if(\is_dir($directory)){
+		if(is_dir($directory)){
 			$plugins = [];
 			$loadedPlugins = [];
 			$dependencies = [];
 			$softDependencies = [];
-			if(\is_array($newLoaders)){
+			if(is_array($newLoaders)){
 				$loaders = [];
 				foreach($newLoaders as $key){
 					if(isset($this->fileAssociations[$key])){
@@ -200,10 +200,10 @@ class PluginManager{
 						$description = $loader->getPluginDescription($file);
 						if($description instanceof PluginDescription){
 							$name = $description->getName();
-							if(\stripos($name, "pocketmine") !== false or \stripos($name, "minecraft") !== false or \stripos($name, "mojang") !== false){
+							if(stripos($name, "pocketmine") !== false or stripos($name, "minecraft") !== false or stripos($name, "mojang") !== false){
 								$this->server->getLogger()->error($this->server->getLanguage()->translateString("pocketmine.plugin.loadError", [$name, "%pocketmine.plugin.restrictedName"]));
 								continue;
-							}elseif(\strpos($name, " ") !== false){
+							}elseif(strpos($name, " ") !== false){
 								$this->server->getLogger()->warning($this->server->getLanguage()->translateString("pocketmine.plugin.spacesDiscouraged", [$name]));
 							}
 
@@ -260,7 +260,7 @@ class PluginManager{
 			}
 
 
-			while(\count($plugins) > 0){
+			while(count($plugins) > 0){
 				$missingDependency = true;
 				foreach($plugins as $name => $file){
 					if(isset($dependencies[$name])){
@@ -273,7 +273,7 @@ class PluginManager{
 							}
 						}
 
-						if(\count($dependencies[$name]) === 0){
+						if(count($dependencies[$name]) === 0){
 							unset($dependencies[$name]);
 						}
 					}
@@ -285,7 +285,7 @@ class PluginManager{
 							}
 						}
 
-						if(\count($softDependencies[$name]) === 0){
+						if(count($softDependencies[$name]) === 0){
 							unset($softDependencies[$name]);
 						}
 					}
@@ -443,7 +443,7 @@ class PluginManager{
 	public function unsubscribeFromPermission($permission, Permissible $permissible){
 		if(isset($this->permSubs[$permission])){
 			unset($this->permSubs[$permission][\spl_object_hash($permissible)]);
-			if(\count($this->permSubs[$permission]) === 0){
+			if(count($this->permSubs[$permission]) === 0){
 				unset($this->permSubs[$permission]);
 			}
 		}
@@ -579,11 +579,11 @@ class PluginManager{
 		$pluginCmds = [];
 
 		foreach($plugin->getDescription()->getCommands() as $key => $data){
-			if(\strpos($key, ":") !== false){
+			if(strpos($key, ":") !== false){
 				$this->server->getLogger()->critical($this->server->getLanguage()->translateString("pocketmine.plugin.commandError", [$key, $plugin->getDescription()->getFullName()]));
 				continue;
 			}
-			if(\is_array($data)){
+			if(is_array($data)){
 				$newCmd = new PluginCommand($key, $plugin);
 				if(isset($data["description"])){
 					$newCmd->setDescription($data["description"]);
@@ -593,10 +593,10 @@ class PluginManager{
 					$newCmd->setUsage($data["usage"]);
 				}
 
-				if(isset($data["aliases"]) and \is_array($data["aliases"])){
+				if(isset($data["aliases"]) and is_array($data["aliases"])){
 					$aliasList = [];
 					foreach($data["aliases"] as $alias){
-						if(\strpos($alias, ":") !== false){
+						if(strpos($alias, ":") !== false){
 							$this->server->getLogger()->critical($this->server->getLanguage()->translateString("pocketmine.plugin.aliasError", [$alias, $plugin->getDescription()->getFullName()]));
 							continue;
 						}
@@ -705,13 +705,13 @@ class PluginManager{
 			if(!$method->isStatic()){
 				$priority = EventPriority::NORMAL;
 				$ignoreCancelled = false;
-				if(\preg_match("/^[\t ]*\\* @priority[\t ]{1,}([a-zA-Z]{1,})/m", (string) $method->getDocComment(), $matches) > 0){
+				if(preg_match("/^[\t ]*\\* @priority[\t ]{1,}([a-zA-Z]{1,})/m", (string) $method->getDocComment(), $matches) > 0){
 					$matches[1] = \strtoupper($matches[1]);
-					if(\defined(EventPriority::class . "::" . $matches[1])){
+					if(defined(EventPriority::class . "::" . $matches[1])){
 						$priority = \constant(EventPriority::class . "::" . $matches[1]);
 					}
 				}
-				if(\preg_match("/^[\t ]*\\* @ignoreCancelled[\t ]{1,}([a-zA-Z]{1,})/m", (string) $method->getDocComment(), $matches) > 0){
+				if(preg_match("/^[\t ]*\\* @ignoreCancelled[\t ]{1,}([a-zA-Z]{1,})/m", (string) $method->getDocComment(), $matches) > 0){
 					$matches[1] = \strtolower($matches[1]);
 					if($matches[1] === "false"){
 						$ignoreCancelled = false;
@@ -721,10 +721,10 @@ class PluginManager{
 				}
 
 				$parameters = $method->getParameters();
-				if(\count($parameters) === 1 and $parameters[0]->getClass() instanceof \ReflectionClass and \is_subclass_of($parameters[0]->getClass()->getName(), Event::class)){
+				if(count($parameters) === 1 and $parameters[0]->getClass() instanceof \ReflectionClass and is_subclass_of($parameters[0]->getClass()->getName(), Event::class)){
 					$class = $parameters[0]->getClass()->getName();
 					$reflection = new \ReflectionClass($class);
-					if(\strpos((string) $reflection->getDocComment(), "@deprecated") !== false and $this->server->getProperty("settings.deprecated-verbose", true)){
+					if(strpos((string) $reflection->getDocComment(), "@deprecated") !== false and $this->server->getProperty("settings.deprecated-verbose", true)){
 						$this->server->getLogger()->warning($this->server->getLanguage()->translateString("pocketmine.plugin.deprecatedEvent", [
 							$plugin->getName(),
 							$class,

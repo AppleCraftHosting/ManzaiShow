@@ -66,7 +66,7 @@ class EncapsulatedPacket{
             $packet->identifierACK = (PHP_INT_SIZE === 8 ? \unpack("N", \substr($binary, 5, 4))[1] << 32 >> 32 : \unpack("N", \substr($binary, 5, 4))[1]);
             $offset = 9;
         }else{
-            $length = (int) \ceil(\unpack("n", \substr($binary, 1, 2))[1] / 8);
+            $length = (int) ceil(\unpack("n", \substr($binary, 1, 2))[1] / 8);
             $offset = 3;
 	        $packet->identifierACK = null;
         }
@@ -126,7 +126,7 @@ class EncapsulatedPacket{
      */
     public function toBinary($internal = false){
         return
-			\chr(($this->reliability << 5) | ($this->hasSplit ? 0b00010000 : 0)) .
+			chr(($this->reliability << 5) | ($this->hasSplit ? 0b00010000 : 0)) .
 			($internal ? \pack("N", \strlen($this->buffer)) . \pack("N", $this->identifierACK) : \pack("n", \strlen($this->buffer) << 3)) .
 			($this->reliability > 0 ?
 				(($this->reliability >= 2 and $this->reliability !== 5) ? \substr(\pack("V", $this->messageIndex), 0, -1) : "") .

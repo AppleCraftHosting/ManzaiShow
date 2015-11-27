@@ -173,7 +173,7 @@ class QueryRegenerateEvent extends ServerEvent{
 		$query = "";
 
 		$plist = $this->server_engine;
-		if(\count($this->plugins) > 0 and $this->listPlugins){
+		if(count($this->plugins) > 0 and $this->listPlugins){
 			$plist .= ":";
 			foreach($this->plugins as $p){
 				$d = $p->getDescription();
@@ -183,7 +183,7 @@ class QueryRegenerateEvent extends ServerEvent{
 		}
 
 		$KVdata = [
-			"splitnum" => \chr(128),
+			"splitnum" => chr(128),
 			"hostname" => $this->serverName,
 			"gametype" => $this->gametype,
 			"game_id" => self::GAME_ID,

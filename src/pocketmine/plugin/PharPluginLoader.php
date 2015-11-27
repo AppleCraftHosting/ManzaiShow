@@ -54,14 +54,14 @@ class PharPluginLoader implements PluginLoader{
 		if(($description = $this->getPluginDescription($file)) instanceof PluginDescription){
 			$this->server->getLogger()->info($this->server->getLanguage()->translateString("pocketmine.plugin.load", [$description->getFullName()]));
 			$dataFolder = \dirname($file) . DIRECTORY_SEPARATOR . $description->getName();
-			if(\file_exists($dataFolder) and !\is_dir($dataFolder)){
+			if(file_exists($dataFolder) and !is_dir($dataFolder)){
 				throw new \InvalidStateException("Projected dataFolder '" . $dataFolder . "' for " . $description->getName() . " exists and is not a directory");
 			}
 			$file = "phar://$file";
 			$className = $description->getMain();
 			$this->server->getLoader()->addPath("$file/src");
 
-			if(\class_exists($className, true)){
+			if(class_exists($className, true)){
 				$plugin = new $className();
 				$this->initPlugin($plugin, $description, $dataFolder, $file);
 

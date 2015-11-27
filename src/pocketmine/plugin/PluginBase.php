@@ -166,7 +166,7 @@ abstract class PluginBase implements Plugin{
 	 * @return bool
 	 */
 	protected function isPhar(){
-		return \substr($this->file, 0, 7) === "phar://";
+		return substr($this->file, 0, 7) === "phar://";
 	}
 
 	/**
@@ -179,8 +179,8 @@ abstract class PluginBase implements Plugin{
 	 */
 	public function getResource($filename){
 		$filename = \rtrim(\str_replace("\\", "/", $filename), "/");
-		if(\file_exists($this->file . "resources/" . $filename)){
-			return \fopen($this->file . "resources/" . $filename, "rb");
+		if(file_exists($this->file . "resources/" . $filename)){
+			return fopen($this->file . "resources/" . $filename, "rb");
 		}
 
 		return null;
@@ -193,7 +193,7 @@ abstract class PluginBase implements Plugin{
 	 * @return bool
 	 */
 	public function saveResource($filename, $replace = false){
-		if(\trim($filename) === ""){
+		if(trim($filename) === ""){
 			return false;
 		}
 
@@ -206,7 +206,7 @@ abstract class PluginBase implements Plugin{
 			\mkdir($this->dataFolder, 0755, true);
 		}
 
-		if(\file_exists($out) and $replace !== true){
+		if(file_exists($out) and $replace !== true){
 			return false;
 		}
 
@@ -223,7 +223,7 @@ abstract class PluginBase implements Plugin{
 	 */
 	public function getResources(){
 		$resources = [];
-		if(\is_dir($this->file . "resources/")){
+		if(is_dir($this->file . "resources/")){
 			foreach(new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->file . "resources/")) as $resource){
 				$resources[] = $resource;
 			}

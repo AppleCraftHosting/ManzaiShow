@@ -29,7 +29,7 @@ class SplFixedByteArray extends SplFixedArray{
 		if($normalize and $this->convert){
 			$d = "";
 			for($i = $start; $i < $end; ++$i){
-				$d .= \chr($this[$i]);
+				$d .= chr($this[$i]);
 			}
 		}else{
 			$d = [];
@@ -91,7 +91,7 @@ class SplFixedByteArray extends SplFixedArray{
 		$result = "";
 		if($this->convert){
 			for($i = 0; $i < $this->getSize(); ++$i){
-				$result .= \chr($this[$i]);
+				$result .= chr($this[$i]);
 			}
 		}else{
 			for($i = 0; $i < $this->getSize(); ++$i){

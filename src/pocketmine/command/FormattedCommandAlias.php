@@ -121,7 +121,7 @@ class FormattedCommandAlias extends Command{
 
 			$end = $index;
 
-			if($required and $position >= \count($args)){
+			if($required and $position >= count($args)){
 				throw new \InvalidArgumentException("Missing required argument " . ($position + 1));
 			}
 

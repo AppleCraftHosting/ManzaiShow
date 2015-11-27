@@ -103,21 +103,21 @@ class BanEntry{
 	 * @return BanEntry
 	 */
 	public static function fromString($str){
-		if(\strlen($str) < 2){
+		if(strlen($str) < 2){
 			return null;
 		}else{
 			$str = \explode("|", \trim($str));
 			$entry = new BanEntry(\trim(\array_shift($str)));
-			if(\count($str) > 0){
+			if(count($str) > 0){
 				$entry->setCreated(\DateTime::createFromFormat(self::$format, \array_shift($str)));
-				if(\count($str) > 0){
+				if(count($str) > 0){
 					$entry->setSource(\trim(\array_shift($str)));
-					if(\count($str) > 0){
+					if(count($str) > 0){
 						$expire = \trim(\array_shift($str));
-						if(\strtolower($expire) !== "forever" and \strlen($expire) > 0){
+						if(strtolower($expire) !== "forever" and strlen($expire) > 0){
 							$entry->setExpires(\DateTime::createFromFormat(self::$format, $expire));
 						}
-						if(\count($str) > 0){
+						if(count($str) > 0){
 							$entry->setReason(\trim(\array_shift($str)));
 						}
 					}
